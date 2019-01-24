@@ -82,6 +82,7 @@ var dict = {
 };
 
 var phrases = {
+    'bad bitch': 'puj laib',
     'good heart': 'sab zoo',
     'first name': 'npe',
     'last name': 'lub ceeg',
