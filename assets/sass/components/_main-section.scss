@@ -1,4 +1,4 @@
-body{
+html body{
     margin: 0;
     display: block;
 }
@@ -17,7 +17,6 @@ body{
 
 .Body-Main-Content{
     margin: 0;
-    
 }
 
 .Body-Main-Footer{
@@ -69,6 +68,7 @@ body{
             border: none;
             border-bottom: 2px solid #efefef;
             -webkit-transition: border-bottom 0.1s ease-in-out;
+            -moz-transition: border-bottom 0.1s ease-in-out;
             transition: border-bottom 0.1s ease-in-out;
             font-size: 14px;
             text-align: center;
@@ -78,6 +78,7 @@ body{
             border-bottom: 2.5px solid #6bf;
             color: #919191;
         }
+
         // TRANSLATE BUTTON
         #search-button{
             padding: 3px 14px;
@@ -134,10 +135,12 @@ body{
                 margin: 0;
                 //transform: rotate(180deg);
                 -webkit-transition: margin-top 0.1s ease-in-out;
+                -moz-transition: margin-top 0.1s ease-in-out;
                 transition: margin-top 0.1s ease-in-out;
                 font-size: 1.3em;
                 color: black;
                 transition: transform 240ms ease-in-out;
+                pointer-events: none;
             }
         }
         #result:hover{
@@ -149,6 +152,11 @@ body{
         #result.load{
             opacity: 1;
         }
+        @media only screen and (max-width: 375px){
+            #result{
+                width: 320px;
+            }
+        }
     }
 }
 
@@ -158,8 +166,13 @@ body{
     50% { -webkit-filter: blur(0.9px); }
     75% { -webkit-filter: blur(0.55px); }
     100% { -webkit-filter: blur(0px); }
-    75% {-webkit-filter: blur(0.55px);}
+    0% { -moz-filter: blur(0px); }
+    25% { -moz-filter: blur(0.45px); }
+    50% { -moz-filter: blur(0.9px); }
+    75% { -moz-filter: blur(0.55px); }
+    100% { -moz-filter: blur(0px); }
 }
+
 
 // footer
 #body-main-footer-credit-wrapper{
@@ -295,7 +308,7 @@ body{
                 #contact-form-submit:hover{
                     cursor: pointer;
                     background: rgb(142, 202, 252);
-                    margin: 0.5px 155px 0 164.5px;
+                    //margin: 0.5px 155px 0 164.5px;
                     //box-shadow: 0 0 8px 0.8px rgb(201, 201, 201);
                     //border: 1.5 solid rgb(142, 202, 252);
                 }
@@ -330,4 +343,132 @@ body{
     #contact-form-overlay-background.unload{
         opacity: 0;
     }
+}
+
+//iPhone X/XR/XS
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+{
+    #search-bar-content{
+        margin: 120px 0 40px 0;
+        #search-wrapper #search-bar-textbox{
+            font-size: 1em;
+            width: 330px;
+        }
+    }
+    #result-content #result-wrapper{
+        padding-top: 190px;
+        #result{
+            width: 320px;
+        }
+    }
+    #contact-form-overlay #contact-form-overlay-background {
+        #contact-form-popup{
+            width: 320px;
+            padding: 20px;
+            #contract-form-popup-msg{
+                margin: 10px 0 20px 0;
+                width: 320px;
+            }
+            #contact-form{
+                width: 320px;
+                #input-text-1{
+                    width: 60%;
+                }
+                #input-text-2{
+                    width: 305px;
+                    height: 220px;
+                }
+                #contact-form-submit{
+                    margin-left: 60px;
+                    margin-right: auto;
+                }
+            }
+        }
+        #close-button-wrapper{
+            margin-top: 555px;
+        }
+    }
+}
+
+//iPhone 6/7/8 Plus
+@media only screen 
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+{
+    #search-bar-content #search-wrapper #search-bar-textbox{
+        font-size: 1.1em;
+        width: 350px;
+    }
+    #result-content #result-wrapper#result-wrapper{
+        padding-top: 135px;
+        #result{
+            width: 380px;
+        }
+    }
+}
+
+//iPhone 6/7/8
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+{
+    #search-bar-content{
+        margin: 100px 0 25px 0;
+        #search-wrapper #search-bar-textbox{
+            font-size: 1em;
+            width: 330px;
+        }
+    }
+    #result-content #result-wrapper{
+        padding-top: 120px;
+        #result{
+            width: 320px;
+        }
+    }
+    #contact-form-overlay #contact-form-overlay-background {
+        #contact-form-popup{
+            width: 320px;
+            padding: 20px;
+            #contract-form-popup-msg{
+                margin: 10px 0 20px 0;
+                width: 320px;
+            }
+            #contact-form{
+                width: 320px;
+                #input-text-1{
+                    width: 60%;
+                }
+                #input-text-2{
+                    width: 305px;
+                    height: 220px;
+                }
+                #contact-form-submit{
+                    margin-left: 60px;
+                    margin-right: auto;
+                }
+            }
+        }
+        #close-button-wrapper{
+            margin-top: 555px;
+        }
+    }
+}
+
+//iPad Landscape
+@media only screen 
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+{
+    
+}
+//iPad Portrait
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+{
+
 }
