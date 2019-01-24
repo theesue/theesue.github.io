@@ -6,7 +6,7 @@
   font-size: 14px;
   color: #7a7a7a; }
 
-body {
+html body {
   margin: 0;
   display: block; }
 
@@ -80,6 +80,7 @@ body {
       border: none;
       border-bottom: 2px solid #efefef;
       -webkit-transition: border-bottom 0.1s ease-in-out;
+      -moz-transition: border-bottom 0.1s ease-in-out;
       -o-transition: border-bottom 0.1s ease-in-out;
       transition: border-bottom 0.1s ease-in-out;
       font-size: 14px;
@@ -137,6 +138,7 @@ body {
       #result-content #result-wrapper #result #arrow-symbol {
         margin: 0;
         -webkit-transition: margin-top 0.1s ease-in-out;
+        -moz-transition: margin-top 0.1s ease-in-out;
         -o-transition: margin-top 0.1s ease-in-out;
         transition: margin-top 0.1s ease-in-out;
         font-size: 1.3em;
@@ -145,7 +147,8 @@ body {
         transition: -webkit-transform 240ms ease-in-out;
         -o-transition: transform 240ms ease-in-out;
         transition: transform 240ms ease-in-out;
-        transition: transform 240ms ease-in-out, -webkit-transform 240ms ease-in-out; }
+        transition: transform 240ms ease-in-out, -webkit-transform 240ms ease-in-out;
+        pointer-events: none; }
     #result-content #result-wrapper #result:hover #arrow-symbol {
       -webkit-transform: translateY(185px) rotate(180deg);
       -ms-transform: translateY(185px) rotate(180deg);
@@ -154,6 +157,9 @@ body {
       animation: blur 150ms; }
     #result-content #result-wrapper #result.load {
       opacity: 1; }
+    @media only screen and (max-width: 375px) {
+      #result-content #result-wrapper #result {
+        width: 320px; } }
 
 @-webkit-keyframes blur {
   0% {
@@ -166,8 +172,16 @@ body {
     -webkit-filter: blur(0.55px); }
   100% {
     -webkit-filter: blur(0px); }
+  0% {
+    -moz-filter: blur(0px); }
+  25% {
+    -moz-filter: blur(0.45px); }
+  50% {
+    -moz-filter: blur(0.9px); }
   75% {
-    -webkit-filter: blur(0.55px); } }
+    -moz-filter: blur(0.55px); }
+  100% {
+    -moz-filter: blur(0px); } }
 
 @keyframes blur {
   0% {
@@ -180,8 +194,16 @@ body {
     -webkit-filter: blur(0.55px); }
   100% {
     -webkit-filter: blur(0px); }
+  0% {
+    -moz-filter: blur(0px); }
+  25% {
+    -moz-filter: blur(0.45px); }
+  50% {
+    -moz-filter: blur(0.9px); }
   75% {
-    -webkit-filter: blur(0.55px); } }
+    -moz-filter: blur(0.55px); }
+  100% {
+    -moz-filter: blur(0px); } }
 
 #body-main-footer-credit-wrapper {
   margin: 0;
@@ -321,8 +343,7 @@ body {
           font-size: 12px; }
         #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit:hover {
           cursor: pointer;
-          background: #8ecafc;
-          margin: 0.5px 155px 0 164.5px; }
+          background: #8ecafc; }
     #contact-form-overlay #contact-form-overlay-background #close-button-wrapper {
       background: transparent;
       position: absolute;
@@ -344,5 +365,72 @@ body {
     transition: opacity 300ms ease-in; }
   #contact-form-overlay #contact-form-overlay-background.unload {
     opacity: 0; }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+  #search-bar-content {
+    margin: 120px 0 40px 0; }
+    #search-bar-content #search-wrapper #search-bar-textbox {
+      font-size: 1em;
+      width: 330px; }
+  #result-content #result-wrapper {
+    padding-top: 190px; }
+    #result-content #result-wrapper #result {
+      width: 320px; }
+  #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
+    width: 320px;
+    padding: 20px; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contract-form-popup-msg {
+      margin: 10px 0 20px 0;
+      width: 320px; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
+      width: 320px; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
+        width: 60%; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
+        width: 305px;
+        height: 220px; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
+        margin-left: 60px;
+        margin-right: auto; }
+  #contact-form-overlay #contact-form-overlay-background #close-button-wrapper {
+    margin-top: 555px; } }
+
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
+  #search-bar-content #search-wrapper #search-bar-textbox {
+    font-size: 1.1em;
+    width: 350px; }
+  #result-content #result-wrapper#result-wrapper {
+    padding-top: 135px; }
+    #result-content #result-wrapper#result-wrapper #result {
+      width: 380px; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  #search-bar-content {
+    margin: 100px 0 25px 0; }
+    #search-bar-content #search-wrapper #search-bar-textbox {
+      font-size: 1em;
+      width: 330px; }
+  #result-content #result-wrapper {
+    padding-top: 120px; }
+    #result-content #result-wrapper #result {
+      width: 320px; }
+  #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
+    width: 320px;
+    padding: 20px; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contract-form-popup-msg {
+      margin: 10px 0 20px 0;
+      width: 320px; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
+      width: 320px; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
+        width: 60%; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
+        width: 305px;
+        height: 220px; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
+        margin-left: 60px;
+        margin-right: auto; }
+  #contact-form-overlay #contact-form-overlay-background #close-button-wrapper {
+    margin-top: 555px; } }
 
 /*# sourceMappingURL=main.css.map */
