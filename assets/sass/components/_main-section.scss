@@ -336,11 +336,21 @@ html body{
 //Desktop
 @media only screen
 and (min-device-width: 1006px)
-and (max-device-width: 1920px)
-{
-    #result-content{
-        width: 1920px;
+and (min-device-width: 1920px)
+{   .Body-Main-Container #result-content{
+        width: 100vw;
         height: 800px;
+    }   
+}
+
+//Laptop
+@media only screen
+and (min-device-width: 803px)
+and (max-device-width: 1440px)
+{
+    .Body-Main-Container #result-content{
+        width: 100vw;
+        height: 600px;
     }   
 }
 
