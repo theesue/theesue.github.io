@@ -170,7 +170,6 @@ function search(input) {
                             {
                                 sentence = sentence.concat('', phrases[phrase]);
                                 found = true;
-                                console.log('english to hmong');
                                 break;
                             }
                         }
@@ -178,14 +177,12 @@ function search(input) {
                     //hmong
                     else if(wSize === hSize && words[0] === hComparison[0])
                     {
-                        console.log('check 1.2');
                         if(words[mid] === hComparison[mid])
                         {
                             if(words[wSize-1] === hComparison[hSize-1])
                             {
                                 sentence = sentence.concat('', phrase);
                                 found = true;
-                                console.log('hmong to english');
                                 break;
                             }
                         }
@@ -217,14 +214,12 @@ function search(input) {
                                 }
                                 sentence = sentence.concat(' ', sentence.substring(3));
                                 found = true;
-                                console.log('english to hmong');
                                 break;
                             }
                             else
                             {
                                 sentence = sentence.concat('', dict[key]);
                                 found = true;
-                                console.log('english to hmong');
                                 break;
                             }
                         }
@@ -238,7 +233,6 @@ function search(input) {
                             {
                                 sentence = sentence.concat('', key);
                                 found = true;
-                                console.log('hmong to english');
                                 break;
                             }
                         }
@@ -255,7 +249,6 @@ function search(input) {
                                 {
                                     sentence = sentence.concat(' ', key);
                                     found = true;
-                                    console.log('hmong to english');
                                     break;
                                 }
                             }
@@ -288,9 +281,7 @@ function search(input) {
                                     newSentence.push(dict[key][item] + ' / ');
                                 }
                                 var tmp = newSentence.pop();
-                                console.log(tmp);
                                 tmp = tmp.slice(0, -3);
-                                console.log(tmp);
                                 newSentence.push(tmp);
                                 newSentence.push(')');
                                 translated = true;

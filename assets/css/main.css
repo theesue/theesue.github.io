@@ -87,6 +87,7 @@ html body {
       text-align: center;
       color: #b9b9b9; }
     #search-bar-content #search-wrapper #search-bar-textbox:focus {
+      outline: none;
       border-bottom: 2.5px solid #6bf;
       color: #919191; }
     #search-bar-content #search-wrapper #search-button {
@@ -132,40 +133,57 @@ html body {
       -moz-transition: opacity 2s ease-in;
       -o-transition: opacity 2s ease-in;
       -ms-transition: opacity 2s ease-in;
-      transition: opacity 2s ease-in; }
+      transition: opacity 2s ease-in;
+      display: flex;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
       #result-content #result-wrapper #result #keep-up-message {
         margin: 0; }
-      #result-content #result-wrapper #result #arrow-symbol {
-        margin: 0;
-        -webkit-transition: margin-top 0.1s ease-in-out;
-        -moz-transition: margin-top 0.1s ease-in-out;
-        -o-transition: margin-top 0.1s ease-in-out;
-        transition: margin-top 0.1s ease-in-out;
-        font-size: 1.3em;
-        color: black;
-        -webkit-transition: -webkit-transform 240ms ease-in-out;
-        transition: -webkit-transform 240ms ease-in-out;
-        -o-transition: transform 240ms ease-in-out;
-        transition: transform 240ms ease-in-out;
-        transition: transform 240ms ease-in-out, -webkit-transform 240ms ease-in-out;
-        pointer-events: none; }
+      #result-content #result-wrapper #result #arrow-container {
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+        #result-content #result-wrapper #result #arrow-container #arrow-symbol {
+          margin: 0 0 0 0;
+          width: 100px;
+          height: 100px;
+          font-size: 1.3em;
+          color: black;
+          pointer-events: none;
+          opacity: 0;
+          -webkit-transition: transform 200ms ease-in-out, opacity 130ms ease-in-out;
+          -moz-transition: transform 200ms ease-in-out, opacity 130ms ease-in-out;
+          -o-transition: transform 200ms ease-in-out, opacity 130ms ease-in-out;
+          -ms-transition: transform 200ms ease-in-out, opacity 130ms ease-in-out;
+          -webkit-transition: opacity 130ms ease-in-out, -webkit-transform 200ms ease-in-out;
+          transition: opacity 130ms ease-in-out, -webkit-transform 200ms ease-in-out;
+          transition: transform 200ms ease-in-out, opacity 130ms ease-in-out;
+          transition: transform 200ms ease-in-out, opacity 130ms ease-in-out, -webkit-transform 200ms ease-in-out; }
+        #result-content #result-wrapper #result #arrow-container #arrow-symbol.fadein {
+          opacity: 1; }
+        #result-content #result-wrapper #result #arrow-container #arrow-symbol.fadeout {
+          opacity: 0; }
     #result-content #result-wrapper #result.load {
       opacity: 1; }
 
-#result-content:hover #arrow-symbol {
-  -webkit-transform: translateY(185px) rotate(180deg);
-  -ms-transform: translateY(185px) rotate(180deg);
-  transform: translateY(185px) rotate(180deg);
-  -webkit-animation: blur 150ms;
-  animation: blur 150ms; }
-
 @-webkit-keyframes blur {
   0% {
-    -webkit-filter: blur(0px); }
+    -webkit-filter: blur(0%); }
   25% {
-    -webkit-filter: blur(0.45px); }
+    -webkit-filter: blur(0.6px); }
   50% {
-    -webkit-filter: blur(0.9px); }
+    -webkit-filter: blur(1.3px); }
   75% {
     -webkit-filter: blur(0.55px); }
   100% {
@@ -173,9 +191,9 @@ html body {
   0% {
     -moz-filter: blur(0px); }
   25% {
-    -moz-filter: blur(0.45px); }
+    -moz-filter: blur(0.6px); }
   50% {
-    -moz-filter: blur(0.9px); }
+    -moz-filter: blur(1.3px); }
   75% {
     -moz-filter: blur(0.55px); }
   100% {
@@ -183,11 +201,11 @@ html body {
 
 @keyframes blur {
   0% {
-    -webkit-filter: blur(0px); }
+    -webkit-filter: blur(0%); }
   25% {
-    -webkit-filter: blur(0.45px); }
+    -webkit-filter: blur(0.6px); }
   50% {
-    -webkit-filter: blur(0.9px); }
+    -webkit-filter: blur(1.3px); }
   75% {
     -webkit-filter: blur(0.55px); }
   100% {
@@ -195,9 +213,9 @@ html body {
   0% {
     -moz-filter: blur(0px); }
   25% {
-    -moz-filter: blur(0.45px); }
+    -moz-filter: blur(0.6px); }
   50% {
-    -moz-filter: blur(0.9px); }
+    -moz-filter: blur(1.3px); }
   75% {
     -moz-filter: blur(0.55px); }
   100% {
@@ -227,6 +245,7 @@ html body {
   margin: 0px;
   padding: 0px;
   border: none;
+  outline: none;
   background: transparent;
   font-family: "Times Roman";
   font-size: 14px;
@@ -236,6 +255,8 @@ html body {
   transition: color 0.1s ease-in-out; }
 
 #contactformbutton:hover {
+  border: none;
+  outline: none;
   color: #6bf;
   cursor: pointer; }
 
@@ -244,8 +265,7 @@ html body {
   display: none;
   position: fixed;
   min-width: 100vw;
-  height: 100%;
-  z-index: 1; }
+  height: 100%; }
   #contact-form-overlay #contact-form-overlay-background {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -273,14 +293,15 @@ html body {
     -ms-transition: opacity 300ms ease-in;
     transition: opacity 300ms ease-in; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
+      z-index: 2;
       width: 550px;
       height: 560px;
       padding: 30px 30px 30px 55px;
       border-radius: 25px;
       background: white; }
-      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contract-form-popup-msg {
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
         width: 516px;
-        margin-top: 20px;
+        margin-top: 15px;
         margin-bottom: 30px;
         font-size: 13px;
         font-family: 'Verdana';
@@ -329,7 +350,7 @@ html body {
         #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2:focus {
           border: 1.5px solid #6bf; }
         #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
-          margin: 0 155px 0 164px;
+          margin: 0 155px 8px 164px;
           padding: 10px 15px 10px 15px;
           width: 200px;
           background: #6bf;
@@ -342,16 +363,18 @@ html body {
         #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit:hover {
           cursor: pointer;
           background: #8ecafc; }
-    #contact-form-overlay #contact-form-overlay-background #close-button-wrapper {
-      background: transparent;
-      position: absolute;
-      margin: 570px 0px 0px 0px; }
-      #contact-form-overlay #contact-form-overlay-background #close-button-wrapper #close-button {
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {
+        margin: 0 auto 0 233px;
+        padding: 10px 15px 10px 15px;
+        width: auto;
+        background: none;
+        outline: none;
+        border: none;
         font-family: 'Verdana';
         font-size: 12px;
         text-decoration: none;
         color: #aaa; }
-      #contact-form-overlay #contact-form-overlay-background #close-button-wrapper #close-button:hover {
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button:hover {
         color: #ff6666;
         cursor: pointer; }
   #contact-form-overlay #contact-form-overlay-background.load {
@@ -366,13 +389,27 @@ html body {
 
 @media only screen and (min-device-width: 1006px) and (min-device-width: 1920px) {
   .Body-Main-Container #result-content {
-    width: 100vw;
-    height: 800px; } }
+    width: 98vw;
+    height: 700px; }
+    .Body-Main-Container #result-content #result-wrapper {
+      padding-top: 250px; }
+  .Body-Main-Container #result-content:hover #arrow-symbol {
+    opacity: 1;
+    -webkit-transform: translateY(-310px) rotateY(1080deg);
+    transform: translateY(-310px) rotateY(1080deg);
+    -webkit-animation: blur 180ms;
+    animation: blur 180ms; } }
 
 @media only screen and (min-device-width: 803px) and (max-device-width: 1440px) {
   .Body-Main-Container #result-content {
     width: 100vw;
-    height: 600px; } }
+    height: 600px; }
+  .Body-Main-Container #result-content:hover #result #arrow-symbol {
+    opacity: 1;
+    -webkit-transform: translateY(-220px) rotateY(1080deg);
+    transform: translateY(-220px) rotateY(1080deg);
+    -webkit-animation: blur 180ms;
+    animation: blur 180ms; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
   #search-bar-content {
@@ -384,6 +421,13 @@ html body {
     padding-top: 190px; }
     #result-content #result-wrapper #result {
       width: 320px; }
+      #result-content #result-wrapper #result #arrow-symbol {
+        margin-top: 150px;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+  #result-content:hover {
+    pointer-events: none; }
   #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
     width: 320px;
     padding: 20px; }
@@ -410,7 +454,14 @@ html body {
   #result-content #result-wrapper#result-wrapper {
     padding-top: 135px; }
     #result-content #result-wrapper#result-wrapper #result {
-      width: 380px; } }
+      width: 380px; }
+      #result-content #result-wrapper#result-wrapper #result #arrow-symbol {
+        margin-top: 80px;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+  #result-content:hover {
+    pointer-events: none; } }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   #search-bar-content {
@@ -422,6 +473,13 @@ html body {
     padding-top: 120px; }
     #result-content #result-wrapper #result {
       width: 320px; }
+      #result-content #result-wrapper #result #arrow-symbol {
+        margin-top: 60px;
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg); }
+  #result-content:hover {
+    pointer-events: none; }
   #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
     width: 320px;
     padding: 20px; }
