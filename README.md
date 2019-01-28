@@ -30,4 +30,4 @@ Create a minimal static website to translate Hmong : English and learn as much a
   9. <a href="https://trello.com/">Trello</a>
       * Organize project(s) and task(s)
   10. Hmong Words & Phrases (Thanks Mom!)</br>
-  #### I learned a lot within 3 weeks of this project.
+  #### I learned a lot within 3 weeks of starting this project.
