@@ -37,7 +37,7 @@ and (max-device-width: 812px)
     #contact-form-overlay #contact-form-overlay-background {
         #contact-form-popup{
             width: 320px;
-            height: 560px;
+            height: 570px;
             padding: 20px;
             #contact-form-popup-msg{
                 width: 320px;
@@ -46,11 +46,13 @@ and (max-device-width: 812px)
             #contact-form{
                 width: 320px;
                 #input-text-1{
+                    font-size: 16px;
                     width: 60%;
                 }
                 #input-text-2{
                     width: 305px;
                     height: 220px;
+                    font-size: 17px;
                 }
                 #contact-form-submit{
                     margin-left: 65px;
