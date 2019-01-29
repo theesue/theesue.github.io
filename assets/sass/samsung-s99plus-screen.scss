@@ -24,28 +24,29 @@ and (max-device-width: 740px)
     }
     #contact-form-overlay #contact-form-overlay-background {
         #contact-form-popup{
-            width: 320px;
+            width: 300px;
             height: 560px;
             padding: 20px;
             #contact-form-popup-msg{
+                width: 320px;
                 margin: 5px 0 20px 0;
             }
             #contact-form{
-                width: 320px;
+                width: 300px;
                 #input-text-1{
                     width: 60%;
                 }
                 #input-text-2{
-                    width: 305px;
+                    width: 283px;
                     height: 220px;
                 }
                 #contact-form-submit{
-                    margin-left: 60px;
+                    margin-left: 53px;
                     margin-right: auto;
                 }
             }
             #close-button{
-                margin: 0 auto 0 135px;
+                margin: 0 auto 0 128px;
                 padding: 5px 10px;
             }
         }

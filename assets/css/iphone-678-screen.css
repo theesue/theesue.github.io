@@ -25,7 +25,8 @@
     height: 570px;
     padding: 20px; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
-      margin: 10px 0px 15px 0px; }
+      margin: 10px 0px 15px 0px;
+      width: 320px; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
       width: 320px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
@@ -37,4 +38,4 @@
         margin-left: 60px;
         margin-right: auto; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {
-      margin: 0 auto 0 128px; } }
+      margin: 0 auto 0 130px; } }

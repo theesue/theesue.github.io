@@ -40,6 +40,7 @@ and (max-device-width: 812px)
             height: 560px;
             padding: 20px;
             #contact-form-popup-msg{
+                width: 320px;
                 margin: 5px 0 20px 0;
             }
             #contact-form{
@@ -52,12 +53,12 @@ and (max-device-width: 812px)
                     height: 220px;
                 }
                 #contact-form-submit{
-                    margin-left: 60px;
+                    margin-left: 65px;
                     margin-right: auto;
                 }
             }
             #close-button{
-                margin: 0 auto 0 134px;
+                margin: 0 auto 0 138px;
                 padding: 5px 10px;
             }
         }

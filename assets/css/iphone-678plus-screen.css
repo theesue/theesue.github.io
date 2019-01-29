@@ -9,20 +9,21 @@
       #result-content #result-wrapper#result-wrapper #result #arrow-container #arrow-symbol {
         padding-bottom: 110px; }
   #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
-    width: 340px;
+    width: 350px;
     height: 570px;
     padding: 20px; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
+      width: 345px;
       margin: 8px 0 20px 0; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
-      width: 320px; }
+      width: 330px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
         width: 60%; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
-        width: 305px;
+        width: 330px;
         height: 220px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
-        margin-left: 60px;
+        margin-left: 80px;
         margin-right: auto; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {
-      margin: 0 auto 0 130px; } }
+      margin: 0 auto 0 150px; } }
