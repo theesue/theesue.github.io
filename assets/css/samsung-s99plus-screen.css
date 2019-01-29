@@ -1,0 +1,33 @@
+@media only screen and (min-device-width: 360px) and (max-device-width: 740px) {
+  #search-bar-content {
+    margin: 120px 0 40px 0; }
+    #search-bar-content #search-wrapper #search-bar-textbox {
+      font-size: 1em;
+      width: 330px; }
+  #result-content #result-wrapper {
+    padding-top: 190px; }
+    #result-content #result-wrapper #result {
+      width: 320px; }
+      #result-content #result-wrapper #result #arrow-container #arrow-symbol {
+        padding-bottom: 80px; }
+  #result-content:hover {
+    pointer-events: none; }
+  #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
+    width: 320px;
+    height: 560px;
+    padding: 20px; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
+      margin: 5px 0 20px 0; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
+      width: 320px; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
+        width: 60%; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
+        width: 305px;
+        height: 220px; }
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
+        margin-left: 60px;
+        margin-right: auto; }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {
+      margin: 0 auto 0 135px;
+      padding: 5px 10px; } }

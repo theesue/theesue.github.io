@@ -141,9 +141,12 @@ html body{
                 margin: 0;
             }
             #arrow-container{
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
                 transform: rotate(180deg);
                 #arrow-symbol{
-                    margin: 0 0 0 0;
                     width: 100px;
                     height: 100px;
                     font-size: 1.3em;
@@ -252,14 +255,14 @@ html body{
         #contact-form-popup{
             z-index: 2;
             width: 550px;
-            height: 560px;
+            height: 570px;
             padding: 30px 30px 30px 55px;
             border-radius: 25px;
             background: white;
             
 
             #contact-form-popup-msg{
-                width: 516px;
+                width: 535px;
                 margin-top: 15px;
                 margin-bottom: 30px;
                 font-size: 13px;
@@ -312,16 +315,24 @@ html body{
                     margin: 0 155px 8px 164px;
                     padding: 10px 15px 10px 15px;
                     width: 200px;
-                    background: #6bf;
+                    //background: #6bf;
+                    color: #919191;
+                    background: transparent;// #b9b9b9;
                     border-radius: 6px;
                     border: none;
-                    -webkit-transition: background 0.1s ease-in-out;
-                    transition: background 0.1s ease-in-out;
+                    outline: none;
+                    -webkit-transition: background 400ms ease-in-out, color 350ms ease-in-out;
+                    -moz-transition: background 400ms ease-in-out, color 350ms ease-in-out;
+                    -ms-transition: background 400ms ease-in-out, color 350ms ease-in-out;
+                    -o-transition: background 400s ease-in-out, color 350ms ease-in-out;
+                    transition: background 400ms ease-in-out, color 350ms ease-in-out;
                     font-size: 12px;
                 }
                 #contact-form-submit:hover{
                     cursor: pointer;
-                    background: rgb(142, 202, 252);
+                    background: #6bf;
+                    color: white;
+                    //background: rgb(142, 202, 252);
                 }
             }
 
@@ -332,10 +343,16 @@ html body{
                 background: none;
                 outline: none;
                 border: none;
+                border-radius: 6px;
                 font-family: 'Verdana';
                 font-size: 12px;
                 text-decoration: none;
                 color: #aaa;
+                -webkit-transition: color 400ms ease-in-out;
+                -moz-transition: color 400ms ease-in-out;
+                -ms-transition: color 400ms ease-in-out;
+                -o-transition: color 400ms ease-in-out;
+                transition: color 400ms ease-in-out;
             }
             #close-button:hover{
                 color: rgb(255, 102, 102);
@@ -397,140 +414,6 @@ and (max-device-width: 1440px)
             }
         }
     } 
-}
-
-//iPhone X/XR/XS
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 812px)
-{
-    #search-bar-content{
-        margin: 120px 0 40px 0;
-        #search-wrapper #search-bar-textbox{
-            font-size: 1em;
-            width: 330px;
-        }
-    }
-    #result-content #result-wrapper{
-        padding-top: 190px;
-        #result{
-            width: 320px;
-            #arrow-symbol{
-                margin-top: 150px;
-                transform: rotate(180deg);
-            }
-        }
-    }
-    #result-content:hover{
-        pointer-events: none;
-    }
-    #contact-form-overlay #contact-form-overlay-background {
-        #contact-form-popup{
-            width: 320px;
-            padding: 20px;
-            #contract-form-popup-msg{
-                margin: 10px 0 20px 0;
-                width: 320px;
-            }
-            #contact-form{
-                width: 320px;
-                #input-text-1{
-                    width: 60%;
-                }
-                #input-text-2{
-                    width: 305px;
-                    height: 220px;
-                }
-                #contact-form-submit{
-                    margin-left: 60px;
-                    margin-right: auto;
-                }
-            }
-        }
-        #close-button-wrapper{
-            margin-top: 555px;
-        }
-    }
-}
-
-//iPhone 6/7/8 Plus
-@media only screen 
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-{
-    #search-bar-content #search-wrapper #search-bar-textbox{
-        font-size: 1.1em;
-        width: 350px;
-    }
-    #result-content #result-wrapper#result-wrapper{
-        padding-top: 135px;
-        #result{
-            width: 380px;
-            #arrow-symbol{
-                margin-top: 80px;
-                transform: rotate(180deg);
-            }
-        }
-    }
-    #result-content:hover{
-        pointer-events: none;
-    }
-}
-
-//iPhone 6/7/8
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 667px)
-{
-    #search-bar-content{
-        margin: 100px 0 25px 0;
-        #search-wrapper #search-bar-textbox{
-            font-size: 1em;
-            width: 330px;
-        }
-    }
-    #result-content{
-        #result-wrapper{
-            padding-top: 120px;
-            #result{
-                width: 320px;
-                #arrow-symbol{
-                    margin-top: 60px;
-                    transform: rotate(180deg);
-                }
-            }
-        }
-    }
-    #result-content:hover{
-        pointer-events: none;
-    }
-    #contact-form-overlay #contact-form-overlay-background {
-        #contact-form-popup{
-            width: 320px;
-            padding: 20px;
-            #contract-form-popup-msg{
-                margin: 10px 0 20px 0;
-                width: 320px;
-            }
-            #contact-form{
-                width: 320px;
-                #input-text-1{
-                    width: 60%;
-                }
-                #input-text-2{
-                    width: 305px;
-                    height: 220px;
-                }
-                #contact-form-submit{
-                    margin-left: 60px;
-                    margin-right: auto;
-                }
-            }
-        }
-        #close-button-wrapper{
-            margin-top: 555px;
-        }
-    }
 }
 
 //iPad Landscape

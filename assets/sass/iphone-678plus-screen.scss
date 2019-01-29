@@ -1,0 +1,44 @@
+//iPhone 6/7/8 Plus Portrait
+@media only screen
+and (min-device-width: 414px)
+and (max-device-width: 736px)
+{
+    .Main-Main-Content-Container #search-bar-content #search-wrapper #search #search-bar-textbox{
+        font-size: 1.1em;
+        width: 350px;
+    }
+    #result-content #result-wrapper#result-wrapper{
+        padding-top: 135px;
+        #result{
+            width: 380px;
+            #arrow-container #arrow-symbol{
+                    padding-bottom: 110px;
+            }
+        }
+    }
+    #contact-form-overlay #contact-form-overlay-background #contact-form-popup{
+        width: 340px;
+        height: 570px;
+        padding: 20px;
+        #contact-form-popup-msg{
+            margin: 8px 0 20px 0;
+        }
+        #contact-form{
+            width: 320px;
+            #input-text-1{
+                width: 60%;
+            }
+            #input-text-2{
+                width: 305px;
+                height: 220px;
+            }
+            #contact-form-submit{
+                margin-left: 60px;
+                margin-right: auto;
+            }
+        }
+        #close-button{
+            margin: 0 auto 0 130px;
+        }
+    }
+}

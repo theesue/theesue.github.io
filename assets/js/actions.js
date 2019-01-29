@@ -20,17 +20,23 @@ function loadContact() {
 }
 
 function arrwAnimationIn(){
-    if(document.getElementById('result').innerHTML.includes('For inquiries'))
+    if(screen.width !== 375 && screen.width !== 414 && screen.width !== 768)
     {
-        var arrw = document.getElementById('arrow-symbol');
-        arrw.className = 'fadein';
+        if(document.getElementById('result').innerHTML.includes('For inquiries'))
+        {
+            var arrw = document.getElementById('arrow-symbol');
+            arrw.className = 'fadein';
+        }
     }
 }
 function arrwAnimationOut(){
-    if(document.getElementById('result').innerHTML.includes('For inquiries'))
+    if(screen.width !== 375 && screen.width !== 414 && screen.width !== 768)
     {
-        var arrw = document.getElementById('arrow-symbol');
-        arrw.classList.replace('fadein', 'fadeout');
+        if(document.getElementById('result').innerHTML.includes('For inquiries'))
+        {
+            var arrw = document.getElementById('arrow-symbol');
+            arrw.classList.replace('fadein', 'fadeout');
+        }
     }
 }
 
@@ -38,6 +44,7 @@ function arrwHide() {
     var arrw = document.getElementById('result-content').style.pointerEvents ='none';
 }
 
+// On load 
 window.onload = function() {
     document.getElementById('contactformbutton').onclick = function popupshow() {
         popup();
@@ -52,7 +59,6 @@ window.onload = function() {
     document.getElementById('search-bar-textbox').onclick = function stopArrow() {
         arrwHide;
     }
-
 }
 window.setTimeout(loadInquiryMsg, 500);
 
