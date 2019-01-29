@@ -12,6 +12,7 @@ Create a minimal static website to translate Hmong : English and learn as much a
 ### What I learned:
   1. HTML
   2. CSS / SCSS
+      * Flexbox
       * Animation
       * Transition
   4. Javascript
