@@ -16,13 +16,14 @@
       width: 345px;
       margin: 8px 0 20px 0; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
-      width: 330px;
-      font-size: 16px; }
+      width: 330px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
-        width: 60%; }
+        width: 60%;
+        font-size: 16px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
         width: 330px;
-        height: 220px; }
+        height: 220px;
+        font-size: 16px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
         margin-left: 80px;
         margin-right: auto; }
