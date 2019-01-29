@@ -1,0 +1,66 @@
+//iPhone X/XS
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+{
+    #search-bar-content{
+        margin: 120px 0 40px 0;
+        #search-wrapper #search-bar-textbox{
+            font-size: 1em;
+            width: 330px;
+        }
+    }
+    #result-content #result-wrapper{
+        padding-top: 190px;
+        #result{
+            width: 320px;
+            #result{
+                width: 320px;
+                #arrow-container{
+                    -webkit-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                    #arrow-symbol{
+                        margin: 0;
+                        //padding-bottom: 60px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    #result-content:hover{
+        pointer-events: none;
+    }
+    #contact-form-overlay #contact-form-overlay-background {
+        #contact-form-popup{
+            width: 320px;
+            height: 560px;
+            padding: 20px;
+            #contact-form-popup-msg{
+                width: 320px;
+                margin: 5px 0 20px 0;
+            }
+            #contact-form{
+                width: 320px;
+                #input-text-1{
+                    width: 60%;
+                }
+                #input-text-2{
+                    width: 305px;
+                    height: 220px;
+                }
+                #contact-form-submit{
+                    margin-left: 65px;
+                    margin-right: auto;
+                }
+            }
+            #close-button{
+                margin: 0 auto 0 138px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
