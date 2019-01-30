@@ -75,20 +75,26 @@ html body {
     #search-bar-content #search-wrapper #search-bar-textbox {
       background: transparent;
       margin: 0px;
-      padding-bottom: 3px;
+      padding: 8px 0px;
       width: 500px;
-      border: none;
-      border-bottom: 2px solid #efefef;
-      -webkit-transition: border-bottom 0.1s ease-in-out;
-      -moz-transition: border-bottom 0.1s ease-in-out;
-      -o-transition: border-bottom 0.1s ease-in-out;
-      transition: border-bottom 0.1s ease-in-out;
+      border: 2px solid #efefef;
+      border-radius: 20px;
+      -webkit-transition: border 300ms ease-in-out;
+      -moz-transition: border 300ms ease-in-out;
+      -o-transition: border 300ms ease-in-out;
+      transition: border 300ms ease-in-out;
       font-size: 14px;
       text-align: center;
-      color: #b9b9b9; }
+      color: #b9b9b9;
+      font-size: 16px;
+      -webkit-appearance: none;
+      -o-appearance: none;
+      -ms-appearance: none;
+      -moz-appearance: none;
+      appearance: none; }
     #search-bar-content #search-wrapper #search-bar-textbox:focus {
       outline: none;
-      border-bottom: 2.5px solid #6bf;
+      border: 2.8px solid #6bf;
       color: #919191; }
     #search-bar-content #search-wrapper #search-button {
       padding: 3px 14px;
@@ -126,7 +132,7 @@ html body {
     #result-content #result-wrapper #result {
       margin: 0;
       position: relative;
-      font-size: 2em;
+      font-size: 2.2em;
       text-align: center;
       opacity: 0;
       -webkit-transition: opacity 2s ease-in;
@@ -340,6 +346,8 @@ html body {
           outline: none;
           -webkit-transition: border 0.1s ease-in-out;
           -o-transition: border 0.1s ease-in-out;
+          -ms-transition: border 0.1s ease-in-out;
+          -moz-transition: border 0.1s ease-in-out;
           transition: border 0.1s ease-in-out;
           text-align: top;
           resize: none;
@@ -359,6 +367,11 @@ html body {
           border-radius: 6px;
           border: none;
           outline: none;
+          -webkit-appearance: none;
+          -o-appearance: none;
+          -ms-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
           -webkit-transition: background 400ms ease-in-out, color 350ms ease-in-out;
           -moz-transition: background 400ms ease-in-out, color 350ms ease-in-out;
           -ms-transition: background 400ms ease-in-out, color 350ms ease-in-out;
@@ -408,8 +421,8 @@ html body {
       padding-top: 250px; }
   .Body-Main-Container #result-content:hover #arrow-symbol {
     opacity: 1;
-    -webkit-transform: translateY(-310px) rotateY(1080deg);
-    transform: translateY(-310px) rotateY(1080deg);
+    -webkit-transform: translateY(-280px) rotateY(1080deg);
+    transform: translateY(-280px) rotateY(1080deg);
     -webkit-animation: blur 180ms;
     animation: blur 180ms; } }
 
@@ -419,8 +432,8 @@ html body {
     height: 600px; }
   .Body-Main-Container #result-content:hover #result #arrow-symbol {
     opacity: 1;
-    -webkit-transform: translateY(-220px) rotateY(1080deg);
-    transform: translateY(-220px) rotateY(1080deg);
+    -webkit-transform: translateY(-190px) rotateY(1080deg);
+    transform: translateY(-190px) rotateY(1080deg);
     -webkit-animation: blur 180ms;
     animation: blur 180ms; } }
 

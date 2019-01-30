@@ -1,11 +1,11 @@
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
   #search-bar-content {
-    margin: 100px 0 25px 0; }
+    margin: 80px 0 25px 0; }
     #search-bar-content #search-wrapper #search-bar-textbox {
       font-size: 1em;
       width: 330px; }
   #result-content #result-wrapper {
-    padding-top: 120px; }
+    padding-top: 140px; }
     #result-content #result-wrapper #result {
       width: 320px; }
       #result-content #result-wrapper #result #arrow-container {
@@ -22,7 +22,7 @@
     pointer-events: none; }
   #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
     width: 320px;
-    height: 570px;
+    height: 580px;
     padding: 20px; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
       margin: 10px 0px 15px 0px;
@@ -30,10 +30,12 @@
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
       width: 320px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
-        width: 60%; }
+        width: 60%;
+        font-size: 16px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
         width: 305px;
-        height: 220px; }
+        height: 220px;
+        font-size: 17px; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
         margin-left: 60px;
         margin-right: auto; }

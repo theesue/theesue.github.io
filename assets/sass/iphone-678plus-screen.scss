@@ -1,11 +1,14 @@
-//iPhone 6/7/8 Plus Portrait
+//iPhone 6/7/8 Plus
 @media only screen
 and (min-device-width: 414px)
 and (max-device-width: 736px)
 {
-    .Main-Main-Content-Container #search-bar-content #search-wrapper #search #search-bar-textbox{
-        font-size: 1.1em;
-        width: 350px;
+    #search-bar-content {
+        margin: 100px 0 35px 0;
+        #search-wrapper #search-bar-textbox{
+            font-size: 1.1em;
+            width: 350px;
+        }
     }
     #result-content #result-wrapper#result-wrapper{
         padding-top: 135px;
@@ -19,7 +22,7 @@ and (max-device-width: 736px)
     #contact-form-overlay #contact-form-overlay-background{ 
         #contact-form-popup{
             width: 350px;
-            height: 570px;
+            height: 580px;
             padding: 20px;
             #contact-form-popup-msg{
                 width: 345px;
@@ -29,10 +32,12 @@ and (max-device-width: 736px)
                 width: 330px;
                 #input-text-1{
                     width: 60%;
+                    font-size: 16px;
                 }
                 #input-text-2{
                     width: 330px;
                     height: 220px;
+                    font-size: 17px;
                 }
                 #contact-form-submit{
                     margin-left: 80px;
