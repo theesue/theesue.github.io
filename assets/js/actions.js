@@ -91,6 +91,10 @@ window.onload = function() {
     document.getElementById('search-bar-textbox').onclick = function stopArrow() {
         arrwHide;
     }
+    var toggled = document.getElementById('Checkbox-Slider').checked;
+    if(toggled) {
+        addDarkmode();
+    }
 }
 window.setTimeout(loadInquiryMsg, 500);
 
