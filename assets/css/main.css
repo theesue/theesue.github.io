@@ -1,18 +1,16 @@
-#credit {
-  font-size: 14px;
-  color: #7a7a7a; }
-
-#copyright {
-  font-size: 14px;
-  color: #7a7a7a; }
-
-html body {
+body {
   margin: 0;
-  display: block; }
+  display: block;
+  background-color: white;
+  -webkit-transition: background-color 700ms ease-in-out;
+  -ms-transition: background-color 700ms ease-in-out;
+  -moz-transition: background-color 700ms ease-in-out;
+  -o-transition: background-color 700ms ease-in-out;
+  transition: background-color 700ms ease-in-out; }
 
 .Body-Main-Container {
   margin: 0px;
-  min-height: 100vh;
+  min-height: 95vh;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -30,6 +28,74 @@ html body {
 
 .Body-Main-Footer {
   margin-top: auto; }
+
+.Darkmode-Toggle-Container {
+  margin: 12px 8px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
+  justify-content: right; }
+
+.Darkmode-Toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 20px; }
+
+.Darkmode-Toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+.Slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  -webkit-box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.397);
+  box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.397);
+  -webkit-transition: box-shadow 400ms ease-in-out;
+  -ms-transition: box-shadow 400ms ease-in-out;
+  -o-transition: box-shadow 400ms ease-in-out;
+  -moz-transition: box-shadow 400ms ease-in-out;
+  -webkit-transition: -webkit-box-shadow 400ms ease-in-out;
+  transition: -webkit-box-shadow 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out;
+  transition: box-shadow 400ms ease-in-out, -webkit-box-shadow 400ms ease-in-out; }
+
+.Slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  top: 2px;
+  left: 4px;
+  border-radius: 60%;
+  background-color: #2d3436;
+  -webkit-transition: 350ms;
+  -o-transition: 350ms;
+  -moz-transition: 350ms;
+  -ms-transition: 350ms;
+  transition: 350ms; }
+
+input:checked + .Slider {
+  background-color: #7f8c8d; }
+
+input:checked + .Slider:before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  -moz-transform: translateX(25px);
+  -o-transform: translateX(25px);
+  transform: translateX(25px);
+  background-color: #ecf0f1; }
+
+.Slider {
+  border-radius: 40px; }
 
 .Main-Main-Content-Container {
   margin: 0;
@@ -55,7 +121,7 @@ html body {
   margin-bottom: 5px; }
 
 #search-bar-content {
-  margin: 100px 0px 40px 0px; }
+  margin: 50px 0px 40px 0px; }
   #search-bar-content #search-wrapper {
     margin: 0; }
     #search-bar-content #search-wrapper #search {
@@ -77,15 +143,16 @@ html body {
       margin: 0px;
       padding: 8px 0px;
       width: 500px;
-      border: 2px solid #efefef;
+      border: 2px solid #bebebe;
       border-radius: 20px;
       -webkit-transition: border 300ms ease-in-out;
-      -moz-transition: border 300ms ease-in-out;
+      -ms-transition: border 300ms ease-in-out;
       -o-transition: border 300ms ease-in-out;
+      -moz-transition: border 300ms ease-in-out;
       transition: border 300ms ease-in-out;
       font-size: 14px;
       text-align: center;
-      color: #b9b9b9;
+      color: #dfe6e9;
       font-size: 16px;
       -webkit-appearance: none;
       -o-appearance: none;
@@ -95,28 +162,11 @@ html body {
     #search-bar-content #search-wrapper #search-bar-textbox:focus {
       outline: none;
       border: 2.8px solid #6bf;
-      color: #919191; }
-    #search-bar-content #search-wrapper #search-button {
-      padding: 3px 14px;
-      -webkit-transition: background 0.1s ease-in-out;
-      -o-transition: background 0.1s ease-in-out;
-      transition: background 0.1s ease-in-out;
-      border: none;
-      border-radius: 8px;
-      background: #a6d6fc;
-      font-size: 13px;
-      color: white; }
-    #search-bar-content #search-wrapper #search-button:hover {
-      background: #6bf;
-      color: #3a3a3a;
-      cursor: pointer; }
+      color: #7c7c7c; }
 
 #result-content {
-  margin: 0;
-  background: transparent; }
+  margin: 0; }
   #result-content #result-wrapper {
-    margin: 0;
-    padding-top: 190px;
     display: flex;
     display: -webkit-box;
     display: -moz-box;
@@ -134,12 +184,14 @@ html body {
       position: relative;
       font-size: 2.2em;
       text-align: center;
+      letter-spacing: 1px;
+      color: black;
       opacity: 0;
-      -webkit-transition: opacity 2s ease-in;
-      -moz-transition: opacity 2s ease-in;
-      -o-transition: opacity 2s ease-in;
-      -ms-transition: opacity 2s ease-in;
-      transition: opacity 2s ease-in;
+      -webkit-transition: opacity 2s ease-in, color 400ms ease-in-out;
+      -moz-transition: opacity 2s ease-in, color 400ms ease-in-out;
+      -o-transition: opacity 2s ease-in, color 400ms ease-in-out;
+      -ms-transition: opacity 2s ease-in, color 400ms ease-in-out;
+      transition: opacity 2s ease-in, color 400ms ease-in-out;
       display: flex;
       display: -webkit-box;
       display: -moz-box;
@@ -247,8 +299,22 @@ html body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  #body-main-footer-credit-wrapper #credit {
+    color: #b8b8b8;
+    -webkit-transition: color 400ms ease-in-out;
+    -moz-transition: color 400ms ease-in-out;
+    -o-transition: color 400ms ease-in-out;
+    -ms-transition: color 400ms ease-in-out;
+    transition: color 400ms ease-in-out; }
+  #body-main-footer-credit-wrapper #copyright {
+    color: #b8b8b8;
+    -webkit-transition: color 400ms ease-in-out;
+    -moz-transition: color 400ms ease-in-out;
+    -o-transition: color 400ms ease-in-out;
+    -ms-transition: color 400ms ease-in-out;
+    transition: color 400ms ease-in-out; }
 
-#contactformbutton {
+#contact-form-button {
   margin: 0px;
   padding: 0px;
   border: none;
@@ -256,12 +322,15 @@ html body {
   background: transparent;
   font-family: "Times Roman";
   font-size: 14px;
-  color: #7a7a7a;
-  -webkit-transition: color 0.1s ease-in-out;
-  -o-transition: color 0.1s ease-in-out;
-  transition: color 0.1s ease-in-out; }
+  color: #b8b8b8;
+  font-size: 16px;
+  -webkit-transition: color 400ms ease-in-out;
+  -moz-transition: color 400ms ease-in-out;
+  -o-transition: color 400ms ease-in-out;
+  -ms-transition: color 400ms ease-in-out;
+  transition: color 400ms ease-in-out; }
 
-#contactformbutton:hover {
+#contact-form-button:hover {
   border: none;
   outline: none;
   color: #6bf;
@@ -292,7 +361,7 @@ html body {
     margin: 0;
     min-height: 100vh;
     width: auto;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.445);
     opacity: 0;
     -webkit-transition: opacity 300ms ease-in;
     -moz-transition: opacity 300ms ease-in;
@@ -305,7 +374,7 @@ html body {
       height: 570px;
       padding: 30px 30px 30px 55px;
       border-radius: 25px;
-      background: white; }
+      background: #34495e; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
         width: 535px;
         margin-top: 15px;
@@ -344,11 +413,11 @@ html body {
           border: 1.5px solid #aaa;
           border-radius: 6px;
           outline: none;
-          -webkit-transition: border 0.1s ease-in-out;
-          -o-transition: border 0.1s ease-in-out;
-          -ms-transition: border 0.1s ease-in-out;
-          -moz-transition: border 0.1s ease-in-out;
-          transition: border 0.1s ease-in-out;
+          -webkit-transition: border 100ms ease-in-out;
+          -o-transition: border 100ms ease-in-out;
+          -ms-transition: border 100ms ease-in-out;
+          -moz-transition: border 100ms ease-in-out;
+          transition: border 100ms ease-in-out;
           text-align: top;
           resize: none;
           font-family: 'Verdana';
@@ -363,7 +432,7 @@ html body {
           padding: 10px 15px 10px 15px;
           width: 200px;
           color: #919191;
-          background: transparent;
+          background-color: transparent;
           border-radius: 6px;
           border: none;
           outline: none;
@@ -372,16 +441,16 @@ html body {
           -ms-appearance: none;
           -moz-appearance: none;
           appearance: none;
-          -webkit-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-          -moz-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-          -ms-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-          -o-transition: background 400s ease-in-out, color 350ms ease-in-out;
-          -o-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-          transition: background 400ms ease-in-out, color 350ms ease-in-out;
+          -webkit-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+          -moz-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+          -ms-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+          -o-transition: background-color 400s ease-in-out, color 350ms ease-in-out;
+          -o-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+          transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
           font-size: 12px; }
         #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit:hover {
           cursor: pointer;
-          background: #6bf;
+          background-color: #6bf;
           color: white; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {
         margin: 0 auto 0 233px;
@@ -401,7 +470,7 @@ html body {
         -o-transition: color 400ms ease-in-out;
         transition: color 400ms ease-in-out; }
       #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button:hover {
-        color: #ff6666;
+        color: #e74c3c;
         cursor: pointer; }
   #contact-form-overlay #contact-form-overlay-background.load {
     opacity: 1;
@@ -428,8 +497,12 @@ html body {
 
 @media only screen and (min-device-width: 803px) and (max-device-width: 1440px) {
   .Body-Main-Container #result-content {
-    width: 100vw;
-    height: 600px; }
+    width: 100vw; }
+    .Body-Main-Container #result-content #result-wrapper {
+      height: 620px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
   .Body-Main-Container #result-content:hover #result #arrow-symbol {
     opacity: 1;
     -webkit-transform: translateY(-190px) rotateY(1080deg);

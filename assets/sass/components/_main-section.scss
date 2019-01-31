@@ -1,10 +1,16 @@
-html body{
+body {
     margin: 0;
     display: block;
+    background-color: white;
+    -webkit-transition: background-color 700ms ease-in-out;
+    -ms-transition: background-color 700ms ease-in-out;
+    -moz-transition: background-color 700ms ease-in-out;
+    -o-transition: background-color 700ms ease-in-out;
+    transition: background-color 700ms ease-in-out;
 }
-.Body-Main-Container{
+.Body-Main-Container {
     margin: 0px;
-    min-height: 100vh;
+    min-height: 95vh;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -15,13 +21,78 @@ html body{
     flex-wrap: wrap;
 }
 
-.Body-Main-Content{
+.Body-Main-Content {
     margin: 0;
 }
 
-.Body-Main-Footer{
+.Body-Main-Footer {
     margin-top: auto;
 }
+
+.Darkmode-Toggle-Container {
+    margin: 12px 8px 0 0;
+    display: flex;
+    justify-content: right;
+}
+
+.Darkmode-Toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 20px;
+}
+.Darkmode-Toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.Slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.397);
+
+    -webkit-transition: box-shadow 400ms ease-in-out;
+    -ms-transition: box-shadow 400ms ease-in-out;
+    -o-transition: box-shadow 400ms ease-in-out;
+    -moz-transition: box-shadow 400ms ease-in-out;
+    transition: box-shadow 400ms ease-in-out;
+}
+.Slider:before{
+    position: absolute;
+    content: '';
+    height: 16px;
+    width: 16px;
+    top:  2px;
+    left: 4px;
+    border-radius: 60%;
+    background-color: $theme_color_1;
+    -webkit-transition: 350ms;
+    -o-transition: 350ms;
+    -moz-transition: 350ms;
+    -ms-transition: 350ms;
+    transition: 350ms;
+}
+input:checked + .Slider{
+    background-color: $theme_color_3;
+}
+input:checked + .Slider:before{
+    -webkit-transform: translateX(25px);
+    -ms-transform: translateX(25px);
+    -moz-transform: translateX(25px);
+    -o-transform: translateX(25px);
+    transform: translateX(25px);
+    background-color: $theme_color_6;
+}
+
+.Slider{
+    border-radius: 40px;
+}
+
 
 .Main-Main-Content-Container{
     margin: 0;
@@ -43,9 +114,8 @@ html body{
     margin-bottom: 5px;
 }
 
-
 #search-bar-content{
-    margin: 100px 0px 40px 0px;
+    margin: 50px 0px 40px 0px;
 
     #search-wrapper{
         margin: 0;
@@ -65,14 +135,16 @@ html body{
             margin: 0px;
             padding: 8px 0px;
             width: 500px;
-            border: 2px solid #efefef;
+            border: 2px solid #bebebe;
             border-radius: 20px;
             -webkit-transition: border 300ms ease-in-out;
+            -ms-transition: border 300ms ease-in-out;
+            -o-transition: border 300ms ease-in-out;
             -moz-transition: border 300ms ease-in-out;
             transition: border 300ms ease-in-out;
             font-size: 14px;
             text-align: center;
-            color: #b9b9b9;
+            color: #dfe6e9;
             font-size: 16px;
             -webkit-appearance: none;
             -o-appearance: none;
@@ -83,35 +155,15 @@ html body{
         #search-bar-textbox:focus{
             outline: none;
             border: 2.8px solid #6bf;
-            color: #919191;
-        }
-
-        // TRANSLATE BUTTON
-        #search-button{
-            padding: 3px 14px;
-            -webkit-transition: background 0.1s ease-in-out;
-            transition: background 0.1s ease-in-out;
-            border: none;
-            border-radius: 8px;
-            background: #a6d6fc;
-            font-size: 13px;
-            color: white;
-        }
-        #search-button:hover{
-            background: #6bf;
-            color: $font-primary-color;
-            cursor: pointer;
+            color: #7c7c7c;
         }
     }
 }
 
 #result-content{
     margin: 0;
-    background: transparent;
-
     #result-wrapper{
-        margin: 0;
-        padding-top: 190px;
+        //height: 600px;
         display: flex;
         display: -webkit-box;
         display: -moz-box;
@@ -126,13 +178,16 @@ html body{
             position: relative;
             font-size: 2.2em;
             text-align: center;
+            letter-spacing: 1px;
+
+            color: black;
 
             opacity: 0;
-            -webkit-transition: opacity 2s ease-in;
-            -moz-transition: opacity 2s ease-in;
-            -o-transition: opacity 2s ease-in;
-            -ms-transition: opacity 2s ease-in;
-            transition: opacity 2s ease-in;
+            -webkit-transition: opacity 2s ease-in, color 400ms ease-in-out;
+            -moz-transition: opacity 2s ease-in, color 400ms ease-in-out;
+            -o-transition: opacity 2s ease-in, color 400ms ease-in-out;
+            -ms-transition: opacity 2s ease-in, color 400ms ease-in-out;
+            transition: opacity 2s ease-in, color 400ms ease-in-out;
 
             display: flex;
             display: -webkit-box;
@@ -209,23 +264,43 @@ html body{
     flex-wrap: wrap;
     align-content: center;
     align-items: center;
+    #credit{
+        color: #b8b8b8;
+        -webkit-transition: color 400ms ease-in-out;
+        -moz-transition: color 400ms ease-in-out;
+        -o-transition: color 400ms ease-in-out;
+        -ms-transition: color 400ms ease-in-out;
+        transition: color 400ms ease-in-out;
+    }
+    #copyright{
+        color: #b8b8b8;
+        -webkit-transition: color 400ms ease-in-out;
+        -moz-transition: color 400ms ease-in-out;
+        -o-transition: color 400ms ease-in-out;
+        -ms-transition: color 400ms ease-in-out;
+        transition: color 400ms ease-in-out;
+    }
 }
 
-#contactformbutton{
+#contact-form-button{
     margin: 0px;
     padding: 0px;
     border: none;
     outline: none;
     background: transparent;
-    font-family: $font-primary-family;
-    font-size: $credit-font-size;
-    color: $description-color;
+    font-family: $font_primary_family;
+    font-size: $credit_font_size;
+    color: #b8b8b8;
+    font-size: 16px;
 
-    -webkit-transition: color 0.1s ease-in-out;
-    transition: color 0.1s ease-in-out;
+    -webkit-transition: color 400ms ease-in-out;
+    -moz-transition: color 400ms ease-in-out;
+    -o-transition: color 400ms ease-in-out;
+    -ms-transition: color 400ms ease-in-out;
+    transition: color 400ms ease-in-out;
 }
 
-#contactformbutton:hover{
+#contact-form-button:hover{
     border: none;
     outline: none;
     color: #6bf;
@@ -248,7 +323,7 @@ html body{
         margin: 0;
         min-height: 100vh;
         width: auto;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.445);
 
         opacity: 0;
         -webkit-transition: opacity 300ms ease-in;
@@ -264,7 +339,7 @@ html body{
             height: 570px;
             padding: 30px 30px 30px 55px;
             border-radius: 25px;
-            background: white;
+            background: $theme_color_2;
             
 
             #contact-form-popup-msg{
@@ -303,11 +378,11 @@ html body{
                     border: 1.5px solid #aaa;
                     border-radius: 6px;
                     outline: none;
-                    -webkit-transition: border 0.1s ease-in-out;
-                    -o-transition: border 0.1s ease-in-out;
-                    -ms-transition: border 0.1s ease-in-out;
-                    -moz-transition: border 0.1s ease-in-out;
-                    transition: border 0.1s ease-in-out;
+                    -webkit-transition: border 100ms ease-in-out;
+                    -o-transition: border 100ms ease-in-out;
+                    -ms-transition: border 100ms ease-in-out;
+                    -moz-transition: border 100ms ease-in-out;
+                    transition: border 100ms ease-in-out;
                     text-align: top;
                     resize: none;
                     font-family: 'Verdana';
@@ -326,7 +401,7 @@ html body{
                     width: 200px;
                     //background: #6bf;
                     color: #919191;
-                    background: transparent;
+                    background-color: transparent;
                     border-radius: 6px;
                     border: none;
                     outline: none;
@@ -335,18 +410,17 @@ html body{
                     -ms-appearance: none;
                     -moz-appearance: none;
                     appearance: none;
-                    -webkit-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-                    -moz-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-                    -ms-transition: background 400ms ease-in-out, color 350ms ease-in-out;
-                    -o-transition: background 400s ease-in-out, color 350ms ease-in-out;
-                    transition: background 400ms ease-in-out, color 350ms ease-in-out;
+                    -webkit-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+                    -moz-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+                    -ms-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
+                    -o-transition: background-color 400s ease-in-out, color 350ms ease-in-out;
+                    transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
                     font-size: 12px;
                 }
                 #contact-form-submit:hover{
                     cursor: pointer;
-                    background: #6bf;
+                    background-color: #6bf;
                     color: white;
-                    //background: rgb(142, 202, 252);
                 }
             }
 
@@ -369,7 +443,7 @@ html body{
                 transition: color 400ms ease-in-out;
             }
             #close-button:hover{
-                color: rgb(255, 102, 102);
+                color: $theme_color_11;
                 cursor: pointer;
             }
         }
@@ -418,7 +492,10 @@ and (max-device-width: 1440px)
     .Body-Main-Container{
         #result-content{
             width: 100vw;
-            height: 600px;
+            #result-wrapper{
+                height: 620px;
+                justify-content: center;
+            }
         }
         #result-content:hover{
             #result #arrow-symbol{

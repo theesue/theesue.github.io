@@ -22,7 +22,7 @@ var dict = {
     'moua': 'mua',
     'yang': 'yaaj',
     'thao': 'thoj',
-    'her': {1:'[pronoun] tug puj nam', 2:'[last name/ceeg] hawj'},
+    'her': {1:'nwg', 2:'[surname] hawj'},
     'hello': 'nyob zoo',
     'forever': 'ib txhib',
     'go': 'moog',
@@ -79,6 +79,8 @@ var dict = {
     'work': 'hu luj',
     'what': '',
     'nice': {1:'zoo', 2:'sab zoo'},
+    'hi': 'nyob zoo',
+    'he': 'nwg',
 };
 
 var phrases = {
@@ -134,7 +136,7 @@ function search(input) {
     if(input.length === 0)
     {
         var paragrph = document.createElement('p');
-        var msg = document.createTextNode('Keep it up');
+        var msg = document.createTextNode('thanks for visiting');
         paragrph.id = "keep-up-message";
         paragrph.appendChild(msg);
         document.getElementById('result').innerHTML = ''; 

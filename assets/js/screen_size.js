@@ -1,8 +1,17 @@
-function screen_size_style(width, height){
-    var head = document.getElementsByTagName('head')[0];
-    var link = document.createElement("link");
-    link.setAttribute("rel", "stylesheet");
-    link.setAttribute("type", "text/css");
+function screen_size_style(width, height) {
+    var head = document.getElementsByTagName('HEAD')[0];
+    var link = document.createElement('link');
+    link.setAttribute('rel', 'stylesheet');
+    link.setAttribute('type', 'text/css');
+
+    var body = document.getElementsByTagName('BODY')[0];
+    var toggle = document.createElement('label');
+    var input = document.createElement('input');
+    var slider = document.createElement('span');
+    toggle.setAttribute('class', 'Darkmode-Toggle');
+    input.setAttribute('class', 'Checkbox');
+    slider.setAttribute('class', 'Slider');
+
 
     // iPhone X/Xs
     if(width === 375 && height === 812){
@@ -19,7 +28,6 @@ function screen_size_style(width, height){
     else if(width === 360 && height === 740){
         link.setAttribute('href', '../assets/css/samsung-s99plus-screen.css');
     }
-    head.appendChild(link);
 }
 
 // Execute code to style the right screen size

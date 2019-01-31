@@ -1,0 +1,31 @@
+body {
+  background-color: #2d3436; }
+
+.Slider {
+  -webkit-box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.459);
+  box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.459); }
+
+#search-bar-content #search-wrapper #search-bar-textbox {
+  border-color: #2d3436;
+  color: #dfe6e9; }
+
+#search-bar-content #search-wrapper #search-bar-textbox:focus {
+  border-color: #bdc3c7;
+  color: #919191; }
+
+#result-content #result-wrapper #result {
+  color: #ecf0f1; }
+  #result-content #result-wrapper #result #arrow-container #arrow-symbol {
+    color: #95a5a6; }
+
+#body-main-footer-credit-wrapper #credit {
+  color: #7f8c8d; }
+
+#body-main-footer-credit-wrapper #copyright {
+  color: #7f8c8d; }
+
+#contact-form-button {
+  color: #7f8c8d; }
+
+#contact-form-button:hover {
+  color: #bdc3c7; }
