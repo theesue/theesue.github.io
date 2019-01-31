@@ -464,14 +464,13 @@ input:checked + .Slider:before{
 //Desktop
 @media only screen
 and (min-device-width: 1006px)
-and (max-device-width: 1920px)
+and (min-device-width: 1920px)
 {   .Body-Main-Container{
         #result-content{
             width: 98vw;
-            height: 675px;
-
             #result-wrapper{
-                padding-top: 250px;
+                height: 675px;
+                justify-content: center;
             }
         }
         #result-content:hover{

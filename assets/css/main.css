@@ -482,12 +482,14 @@ input:checked + .Slider:before {
   #contact-form-overlay #contact-form-overlay-background.unload {
     opacity: 0; }
 
-@media only screen and (min-device-width: 1006px) and (max-device-width: 1920px) {
+@media only screen and (min-device-width: 1006px) and (min-device-width: 1920px) {
   .Body-Main-Container #result-content {
-    width: 98vw;
-    height: 675px; }
+    width: 98vw; }
     .Body-Main-Container #result-content #result-wrapper {
-      padding-top: 250px; }
+      height: 675px;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
   .Body-Main-Container #result-content:hover #arrow-symbol {
     opacity: 1;
     -webkit-transform: translateY(-280px) rotateY(1080deg);
