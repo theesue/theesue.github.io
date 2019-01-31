@@ -485,7 +485,7 @@ input:checked + .Slider:before {
 @media only screen and (min-device-width: 1006px) and (min-device-width: 1920px) {
   .Body-Main-Container #result-content {
     width: 98vw;
-    height: 680px; }
+    height: 675px; }
     .Body-Main-Container #result-content #result-wrapper {
       padding-top: 250px; }
   .Body-Main-Container #result-content:hover #arrow-symbol {
@@ -499,7 +499,7 @@ input:checked + .Slider:before {
   .Body-Main-Container #result-content {
     width: 100vw; }
     .Body-Main-Container #result-content #result-wrapper {
-      height: 600px;
+      height: 590px;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; }
