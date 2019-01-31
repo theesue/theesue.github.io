@@ -482,7 +482,7 @@ input:checked + .Slider:before {
   #contact-form-overlay #contact-form-overlay-background.unload {
     opacity: 0; }
 
-@media only screen and (min-device-width: 1006px) and (min-device-width: 1920px) {
+@media only screen and (min-device-width: 1006px) and (max-device-width: 1920px) {
   .Body-Main-Container #result-content {
     width: 98vw;
     height: 675px; }
@@ -509,5 +509,23 @@ input:checked + .Slider:before {
     transform: translateY(-190px) rotateY(1080deg);
     -webkit-animation: blur 180ms;
     animation: blur 180ms; } }
+
+/*
+//iPad Landscape
+@media only screen 
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+{
+    
+}
+//iPad Portrait
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+{
+
+}*/
 
 /*# sourceMappingURL=main.css.map */

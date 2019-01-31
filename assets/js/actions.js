@@ -85,9 +85,6 @@ window.onload = function() {
     document.getElementById('close-button').onclick = function closePopup() {
         close();
     }
-    document.getElementById('popup-click').onclick = function hidePopup() {
-        close();
-    }
     document.getElementById('search-bar-textbox').onclick = function stopArrow() {
         arrwHide;
     }

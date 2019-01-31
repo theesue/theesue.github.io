@@ -464,7 +464,7 @@ input:checked + .Slider:before{
 //Desktop
 @media only screen
 and (min-device-width: 1006px)
-and (min-device-width: 1920px)
+and (max-device-width: 1920px)
 {   .Body-Main-Container{
         #result-content{
             width: 98vw;
@@ -506,7 +506,7 @@ and (max-device-width: 1440px)
         }
     } 
 }
-
+/*
 //iPad Landscape
 @media only screen 
 and (min-device-width : 768px)
@@ -522,4 +522,4 @@ and (max-device-width : 1024px)
 and (orientation : portrait)
 {
 
-}
+}*/
