@@ -3,49 +3,68 @@
 and (min-device-width: 414px)
 and (max-device-width: 736px)
 {
-    #search-bar-content {
-        margin: 100px 0 35px 0;
-        #search-wrapper #search-bar-textbox{
-            font-size: 1.1em;
-            width: 350px;
+    body .Grid-Container {
+        .Darkmode-Toggle-Container {
+            padding: 0;
+            padding-top: 8px;
+            height: 25px;
+            justify-content: center;
+            align-content: flex-end;
+            grid-row: 3;
         }
-    }
-    #result-content #result-wrapper#result-wrapper{
-        padding-top: 135px;
-        #result{
-            width: 380px;
-            #arrow-container #arrow-symbol{
-                    padding-bottom: 110px;
+        .Body-Main-Container #search-bar-content {
+            margin: 100px 0 35px 0;
+            #search #search-bar-textbox {
+                font-size: 1.1em;
+                width: 350px;
             }
         }
+        #result-content #result-wrapper {
+            height: 470px;
+            justify-content: center;
+            #result {
+                width: 380px;
+            }
+        }
+        #result-content:hover{
+            pointer-events: none;
+        }
     }
-    #contact-form-overlay #contact-form-overlay-background{ 
-        #contact-form-popup{
+    .Contact-Form-Content#load { 
+        #contact-form-popup {
             width: 350px;
-            height: 580px;
+            height: 500px;
             padding: 20px;
-            #contact-form-popup-msg{
+            #contact-form-popup-msg {
                 width: 345px;
                 margin: 8px 0 20px 0;
             }
-            #contact-form{
+            #contact-form {
                 width: 330px;
-                #input-text-1{
-                    width: 60%;
+                #input-text-1 {
+                    width: 40%;
                     font-size: 16px;
                 }
-                #input-text-2{
+                #input-text-2 {
                     width: 330px;
                     height: 220px;
                     font-size: 17px;
                 }
-                #contact-form-submit{
-                    margin-left: 80px;
+                #contact-form-submit {
+                    margin-left: 70px;
                     margin-right: auto;
+                    font-size: 14px;
+                }
+                #input-text-1:focus {
+                    width: 60%
+                }
+                #input-text-1:not(:placeholder-shown) {
+                    width: 60%;
                 }
             }
-            #close-button{
-                margin: 0 auto 0 150px;
+            #close-button {
+                margin: 0 auto 0 136px;
+                font-size: 13px;
             }
         }
     }

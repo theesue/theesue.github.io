@@ -3,24 +3,32 @@
 and (min-device-width: 360px)
 and (max-device-width: 740px)
 {
-    #search-bar-content{
-        margin: 120px 0 40px 0;
-        #search-wrapper #search-bar-textbox{
-            font-size: 1em;
-            width: 330px;
+    body .Grid-Container {
+        .Darkmode-Toggle-Container {
+            padding: 0;
+            padding-top: 8px;
+            height: 25px;
+            justify-content: center;
+            align-content: flex-end;
+            grid-row: 3;
         }
-    }
-    #result-content #result-wrapper{
-        padding-top: 190px;
-        #result{
-            width: 320px;
-            #arrow-container #arrow-symbol{
-                    padding-bottom: 80px;
+        .Body-Main-Container #search-bar-content {
+            margin: 120px 0 40px 0;
+            #search #search-bar-textbox{
+                font-size: 1em;
+                width: 330px;
             }
         }
-    }
-    #result-content:hover{
-        pointer-events: none;
+        #result-content #result-wrapper {
+            height: 420px;
+            justify-content: center;
+            #result {
+                width: 320px;
+            }
+        }
+        #result-content:hover{
+            pointer-events: none;
+        }
     }
     #contact-form-overlay #contact-form-overlay-background {
         #contact-form-popup{

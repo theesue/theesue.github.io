@@ -4,30 +4,32 @@ function screen_size_style(width, height) {
     link.setAttribute('rel', 'stylesheet');
     link.setAttribute('type', 'text/css');
 
-    var body = document.getElementsByTagName('BODY')[0];
-    var toggle = document.createElement('label');
-    var input = document.createElement('input');
-    var slider = document.createElement('span');
-    toggle.setAttribute('class', 'Darkmode-Toggle');
-    input.setAttribute('class', 'Checkbox');
-    slider.setAttribute('class', 'Slider');
-
-
     // iPhone X/Xs
-    if(width === 375 && height === 812){
+    if (width === 375 && height === 812) {
         link.setAttribute("href", '../assets/css/iphone-xxs-screen.css');
     } 
     // iPhone 6/7/8 Plus
-    else if(width === 414 && height === 736){
+    else if (width === 414 && height === 736) {
         link.setAttribute("href", '../assets/css/iphone-678plus-screen.css');
     }
     // iPhone 6/7/8
-    else if(width === 375 && height === 667){
+    else if (width === 375 && height === 667) {
         link.setAttribute("href", '../assets/css/iphone-678-screen.css');
     }
-    else if(width === 360 && height === 740){
+    // S9/9+
+    else if (width === 360 && height === 740) {
         link.setAttribute('href', '../assets/css/samsung-s99plus-screen.css');
     }
+    //iPad Portrait
+    else if (width === 768 && height === 1024) {
+        
+    }
+    //iPad Landscape
+    else if (width === 1024 && height === 768) {
+
+    }
+
+    head.appendChild(link);
 }
 
 // Execute code to style the right screen size

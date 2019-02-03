@@ -4,46 +4,47 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
         <script type="text/javascript" src="../assets/js/screen_size.js"></script>
         <title>Hmong:English Translator</title>
     </head>
     <body>
-        <div class="Darkmode-Toggle-Container">
-            <label class="Darkmode-Toggle">
-                <input type="checkbox" id="Checkbox-Slider">
-                <span class="Slider"></span>
-            </label>
-        </div>
-        <!--Starting Body-->
-        <div class="Body-Main-Container">
-            <!--Body Content-->
-            <div class="Body-Main-Content">
-                <div class="Main-Main-Content-Container">
-                    <div id="search-bar-content">
-                        <div id="search-wrapper">
+        <!--Main Content-->
+        <div class="Grid-Container">
+            <!--Starting Header-->
+            <div class="Darkmode-Toggle-Container" id="header">
+                <label class="Darkmode-Toggle" title="Dark Mode">
+                    <input type="checkbox" id="Checkbox-Slider">
+                    <span class="Slider"></span>
+                </label>
+            </div>
+            <!--Starting Body-->
+            <div class="Body-Main-Container" id="body">
+                <!--Body Content-->
+                <div class="Body-Main-Content">
+                    <div class="Main-Main-Content-Container">
+                        <div id="search-bar-content">
                             <form id="search">
                                 <input id="search-bar-textbox" type="text" placeholder="enter a word or phrase here" spellcheck="true" oninput="search(this.value)" autocomplete="off">
-                                <!--<input id="search-button" type="button" value="translate">-->
                             </form>
                         </div>
-                    </div>
-                    <div id="result-content">
-                        <div id="result-wrapper">
-                            <div id="result">
-                                <!--result goes here-->
-                                For inquiries,</br>click my name</br></br><div id="arrow-container"><div id="arrow-symbol">&#8682</div></div>
+                        <div id="result-content">
+                            <div id="result-wrapper">
+                                <div id="result">
+                                    <!--result goes here-->
+                                    For inquiries,</br>click my name</br></br><div id="arrow-container"><div id="arrow-symbol">&#8682</div></div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Body Footer-->
-            <div class="Body-Main-Footer">
+            <div class="Body-Main-Footer" id="footer">
                 <div class="Body-Main-Footer-Container">
                     <div id="body-main-footer-credit-wrapper">
                         <span id="credit">
-                            Designed by <button id="contact-form-button">Sue Vang</button>
+                            Designed by <button id="contact-button">Sue Vang</button>
                         </span>
                         <span id="copyright">
                             &#x24B8; 2019
@@ -51,25 +52,21 @@
                     </div>
                 </div>
             </div>
-            <!--Contact Form Overlay-->
-            <div id="contact-form-overlay">
-                <div id="contact-form-overlay-background">
-                    <div id="contact-form-popup">
-                        <p id="contact-form-popup-msg">
-                            This website is in its early stages. However, if you would 
-                            like to support me, please do consider buying me a cup of coffee. 
-                            As this website is solely maintained by myself.<br/><br/>
-                            Feel free to send any inquiries, comments, or ideas that you may have.
-                        </p>
-                        <form id="contact-form">
-                            <input id="input-text-1" type="text" placeholder="Full Name">
-                            <input id="input-text-1" type="text" placeholder="Email">
-                            <textarea id="input-text-2" type="text" placeholder='Hello Sue, (double-click to autofill)' ondblclick="this.value='Hello Sue, '"></textarea>
-                            <input id="contact-form-submit" type="button" value="Submit">
-                        </form>
-                        <button id="close-button">Close</button>
-                    </div>
-                </div>
+        </div>
+        <!--Contact Form Overlay-->
+        <div class="Contact-Form-Overlay"></div>
+        <div class="Contact-Form-Content">
+            <div id="contact-form-popup">
+                <p id="contact-form-popup-msg">
+                    Feel free to send any inquiries, comments, or ideas that you may have.
+                </p>
+                <form id="contact-form">
+                    <input id="input-text-1" type="text" name="fullname" placeholder="Full Name">
+                    <input id="input-text-1" type="text" name="email" placeholder="Email">
+                    <textarea id="input-text-2" type="text" name="message" placeholder='Hello Sue, (double-click to autofill)' ondblclick="this.value='Hello Sue, '"></textarea>
+                    <input id="contact-form-submit" type="button" value="Submit">
+                </form>
+                <button id="close-button">Close</button>
             </div>
         </div>
         <script type="text/javascript" src="../assets/js/actions.js"></script>

@@ -4,35 +4,71 @@ body {
 .Slider {
     box-shadow: inset 0 0 8px 2px rgba(0, 0, 0, 0.459);
 }
-#search-bar-content #search-wrapper #search-bar-textbox {
+#search-bar-content #search #search-bar-textbox {
     border-color: #2d3436;
-    color: #dfe6e9;
+    color: #dfe6e9c0;
 }
 #search-bar-content #search-wrapper #search-bar-textbox:focus {
     border-color: #bdc3c7;
-    color: #919191;
+    color: #dfe6e9c0;
 }
-#result-content{
-    #result-wrapper{
+#result-content {
+    #result-wrapper {
         #result{
             color: #ecf0f1;
-            #arrow-container #arrow-symbol{
+            #arrow-container #arrow-symbol {
                 color: #95a5a6;
             }
         }
     }
 }
-#body-main-footer-credit-wrapper{
+#body-main-footer-credit-wrapper {
     #credit{
         color: #7f8c8d;
+        #contact-button{
+            color: #7f8c8d;
+        }
+        #contact-button:hover{
+            color: #bdc3c7;
+        }
     }
     #copyright{
         color: #7f8c8d;
     }
 }
-#contact-form-button{
-    color: #7f8c8d;
-}
-#contact-form-button:hover{
-    color: #bdc3c7;
+.Contact-Form-Content#load {
+    #contact-form-popup {
+        background-color: #3b4547;
+
+        #contact-form-popup-msg {
+            color: #ecf0f1;
+        }
+
+        #contact-form {
+            #input-text-1 {
+                background-color: #5d6d70;
+                border-color: #bdc3c7;
+                color: #ecf0f1;
+            }
+            #input-text-2 {
+                background-color: #5d6d70;
+                border-color: #bdc3c7;
+                color: #ecf0f1;
+            }
+            #input-text-1:focus {
+                box-shadow: inset 0 0 16px 1px rgba(0, 0, 0, 0.349);
+            }
+            #input-text-2:focus {
+                box-shadow: inset 0 0 16px 1px rgba(0, 0, 0, 0.349);
+            }
+            #contact-form-submit {
+                background-color: #5d6d70;
+                color: #ecf0f1;
+            }
+            #contact-form-submit:hover {
+                background-color: #226d99;//#748081;
+                color: #ecf0f1;
+            }
+        }
+    }
 }
