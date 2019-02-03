@@ -184,7 +184,6 @@ input:checked + .Slider:before{
 #result-content{
     margin: 0;
     #result-wrapper{
-        //height: 600px;
         display: flex;
         display: -webkit-box;
         display: -moz-box;
@@ -200,7 +199,6 @@ input:checked + .Slider:before{
             font-size: 2.2em;
             text-align: center;
             letter-spacing: 1px;
-
             color: $theme_color_1;
 
             opacity: 0;

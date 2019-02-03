@@ -15,9 +15,10 @@
     body .Grid-Container .Body-Main-Container #search-bar-content #search #search-bar-textbox {
       font-size: 1.1em;
       width: 350px; }
-  body .Grid-Container #result-content #result-wrapper {
-    padding-top: 130px; }
+  body .Grid-Container #result-content {
+    height: auto; }
     body .Grid-Container #result-content #result-wrapper #result {
+      margin-top: 25px;
       width: 380px; }
   body .Grid-Container #result-content:hover {
     pointer-events: none; }

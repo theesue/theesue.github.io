@@ -19,10 +19,13 @@ and (max-device-width: 736px)
                 width: 350px;
             }
         }
-        #result-content #result-wrapper {
-            padding-top: 130px;
-            #result {
-                width: 380px;
+        #result-content { 
+            height: auto;
+            #result-wrapper {
+                #result {
+                    margin-top: 25px;
+                    width: 380px;
+                }
             }
         }
         #result-content:hover{
