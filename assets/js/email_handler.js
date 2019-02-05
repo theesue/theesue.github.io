@@ -1,22 +1,26 @@
 document.onload = () => {
-    let form = document.querySelector("#contact-form");
-    let button = document.querySelector('#contact-form-send');
+    var form = document.querySelector("#contact-form");
+    var button = document.querySelector('#contact-form-send');
 
     form.submit(function(event) {
         event.preventDefault();
     
-        let template_params = {
+        /*let template_params = {
             'sender_email' : 'send_email_value',
             'full_name' : 'full_name_value',
             'message' : 'message_value'
-        }
+        }*/
+
+        var template_params = form.serializeArray().reduce(function (obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
     
-        let service_id = 'gmail';
-        let template_id = 'hmong_translator';
-        let user_id = 'user_AaGPQlJDryNmPCv9GWwk9';
+        var service_id = 'default_service';
+        var template_id = 'hmong_translator';
     
         button.innerHTML = 'Sending...';
-        emailjs.send(service_id,template_id,template_params,user_id)
+        emailjs.send(service_id,template_id,template_params)
             .then(function(response) {
                 console.log('successs', response.status, response.text);
                 button.innerHTML = 'Send';
