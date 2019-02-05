@@ -13,11 +13,12 @@ document.onload = () => {
     
         var service_id = 'gmail';
         var template_id = 'hmong_translator';
+        var user_id = 'user_AaGPQlJDryNmPCv9GWwk9';
     
         button.innerHTML = 'Sending...';
-        emailjs.send(service_id,template_id,template_params)
+        emailjs.send(service_id,template_id,template_params,user_id)
             .then(function(response) {
-                console.log('successs', reponse.status, reponse.text);
+                console.log('successs', response.status, response.text);
                 button.innerHTML = 'Send';
             }, function(err) {
                 console.log('failed', err);
