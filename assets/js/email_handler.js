@@ -1,5 +1,5 @@
 document.onload = () => {
-    var form = document.querySelector("#contact-form");
+    var form = document.querySelector('form #contact-form');
     var button = document.querySelector('#contact-form-send');
 
     form.submit(function(event) {
@@ -20,9 +20,9 @@ document.onload = () => {
         var template_id = 'hmong_translator';
     
         button.innerHTML = 'Sending...';
-        emailjs.send(service_id,template_id,template_params)
-            .then(function(response) {
-                console.log('successs', response.status, response.text);
+        emailjs.send(service_id, template_id, template_params)
+            .then(function() {
+                console.log('successs');
                 button.innerHTML = 'Send';
             }, function(err) {
                 console.log('failed', err);
