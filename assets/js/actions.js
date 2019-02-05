@@ -86,7 +86,7 @@ function removejscssfile(filename, filetype) {
 }
 
 var removeArrow = (width, height) => {
-    if (width > 414 && height > 812) {
+    if (width <= 414 && height <= 812) {
         document.querySelector('#result').childNodes[7].remove();
     }
 };

@@ -6,7 +6,8 @@ and (max-device-width: 736px)
     body .Grid-Container {
         .Darkmode-Toggle-Container {
             padding: 0;
-            padding-top: 8px;
+            padding-top: 6px;
+            padding-bottom: 10px;
             height: 25px;
             justify-content: center;
             align-content: flex-end;
@@ -23,7 +24,7 @@ and (max-device-width: 736px)
             height: auto;
             #result-wrapper {
                 #result {
-                    margin-top: 25px;
+                    margin-top: 80px;
                     width: 380px;
                 }
             }
@@ -52,7 +53,7 @@ and (max-device-width: 736px)
                     height: 220px;
                     font-size: 17px;
                 }
-                #contact-form-submit {
+                #contact-form-send {
                     margin-left: 70px;
                     margin-right: auto;
                     font-size: 14px;

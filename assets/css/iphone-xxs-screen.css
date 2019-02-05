@@ -2,6 +2,7 @@
   body .Grid-Container .Darkmode-Toggle-Container {
     padding: 0;
     padding-top: 8px;
+    padding-bottom: 10px;
     height: 25px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -11,16 +12,14 @@
     -ms-grid-row: 3;
     grid-row: 3; }
   body .Grid-Container .Body-Main-Container #search-bar-content {
-    margin: 100px 0 30px 0; }
+    margin: 80px 0 30px 0; }
     body .Grid-Container .Body-Main-Container #search-bar-content #search #search-bar-textbox {
       font-size: 1em;
       width: 330px; }
-  body .Grid-Container #result-content #result-wrapper {
-    height: 550px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+  body .Grid-Container #result-content {
+    height: auto; }
     body .Grid-Container #result-content #result-wrapper #result {
+      margin-top: 100px;
       width: 320px; }
   body .Grid-Container #result-content:hover {
     pointer-events: none; }
@@ -40,7 +39,7 @@
         width: 305px;
         height: 220px;
         font-size: 17px; }
-      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-submit {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-send {
         margin-left: 65px;
         margin-right: auto; }
     .Contact-Form-Content#load #contact-form-popup #close-button {

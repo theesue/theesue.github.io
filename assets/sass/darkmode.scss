@@ -8,7 +8,7 @@ body {
     border-color: #2d3436;
     color: #dfe6e9c0;
 }
-#search-bar-content #search-wrapper #search-bar-textbox:focus {
+#search-bar-content #search #search-bar-textbox:focus {
     border-color: #bdc3c7;
     color: #dfe6e9c0;
 }
@@ -61,11 +61,11 @@ body {
             #input-text-2:focus {
                 box-shadow: inset 0 0 16px 1px rgba(0, 0, 0, 0.349);
             }
-            #contact-form-submit {
+            #contact-form-send {
                 background-color: #5d6d70;
                 color: #ecf0f1;
             }
-            #contact-form-submit:hover {
+            #contact-form-send:hover {
                 background-color: #226d99;//#748081;
                 color: #ecf0f1;
             }

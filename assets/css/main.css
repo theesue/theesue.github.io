@@ -4,8 +4,10 @@ html {
 
 body {
   margin: 0;
-  position: fixed;
-  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  height: 100%;
   width: 100%;
   display: block;
   background-color: #ecf0f1;
@@ -51,10 +53,10 @@ body {
   margin-top: auto; }
 
 .Darkmode-Toggle-Container {
-  padding: 12px 8px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 12px 10px 0 0;
   -webkit-box-pack: right;
   -ms-flex-pack: right;
   justify-content: right; }
@@ -87,7 +89,12 @@ body {
   -webkit-transition: -webkit-box-shadow 400ms ease-in-out;
   transition: -webkit-box-shadow 400ms ease-in-out;
   transition: box-shadow 400ms ease-in-out;
-  transition: box-shadow 400ms ease-in-out, -webkit-box-shadow 400ms ease-in-out; }
+  transition: box-shadow 400ms ease-in-out, -webkit-box-shadow 400ms ease-in-out;
+  -webkit-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
 
 .Slider:before {
   position: absolute;
@@ -138,8 +145,7 @@ input:checked + .Slider:before {
   align-items: center; }
 
 .Body-Main-Footer-Container {
-  margin: 0;
-  padding-top: 8px; }
+  margin: 0; }
 
 #search-bar-content {
   margin: 50px 0px 40px 0px; }
@@ -326,7 +332,8 @@ input:checked + .Slider:before {
   align-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  z-index: 1; }
   #body-main-footer-credit-wrapper #credit {
     color: #b8b8b8;
     -webkit-transition: color 400ms ease-in-out;
@@ -505,7 +512,7 @@ input:checked + .Slider:before {
         width: 40%; }
       .Contact-Form-Content#load #contact-form-popup #contact-form #input-text-1:not(:placeholder-shown) {
         width: 40%; }
-      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-submit {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-send {
         margin: 0 auto 8px 160px;
         padding: 10px 15px 10px 15px;
         width: 200px;
@@ -525,7 +532,7 @@ input:checked + .Slider:before {
         -o-transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
         transition: background-color 400ms ease-in-out, color 350ms ease-in-out;
         font-size: 12px; }
-      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-submit:hover {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-send:hover {
         cursor: pointer;
         background-color: #6bf;
         color: white; }

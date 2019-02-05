@@ -2,6 +2,7 @@
   body .Grid-Container .Darkmode-Toggle-Container {
     padding: 0;
     padding-top: 8px;
+    padding-bottom: 12px;
     height: 25px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -15,15 +16,11 @@
     body .Grid-Container .Body-Main-Container #search-bar-content #search #search-bar-textbox {
       font-size: 1em;
       width: 330px; }
-  body .Grid-Container #result-content #result-wrapper {
-    height: 420px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; }
+  body .Grid-Container #result-content {
+    height: auto; }
     body .Grid-Container #result-content #result-wrapper #result {
+      margin-top: 100px;
       width: 320px; }
-  body .Grid-Container #result-content:hover {
-    pointer-events: none; }
   #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
     width: 300px;
     height: 570px;
@@ -40,7 +37,7 @@
         width: 283px;
         height: 220px;
         font-size: 17px; }
-      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-submit {
+      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-send {
         margin-left: 53px;
         margin-right: auto; }
     #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {

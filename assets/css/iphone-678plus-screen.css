@@ -1,7 +1,8 @@
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
   body .Grid-Container .Darkmode-Toggle-Container {
     padding: 0;
-    padding-top: 8px;
+    padding-top: 6px;
+    padding-bottom: 10px;
     height: 25px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -18,7 +19,7 @@
   body .Grid-Container #result-content {
     height: auto; }
     body .Grid-Container #result-content #result-wrapper #result {
-      margin-top: 25px;
+      margin-top: 80px;
       width: 380px; }
   body .Grid-Container #result-content:hover {
     pointer-events: none; }
@@ -38,7 +39,7 @@
         width: 330px;
         height: 220px;
         font-size: 17px; }
-      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-submit {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-send {
         margin-left: 70px;
         margin-right: auto;
         font-size: 14px; }

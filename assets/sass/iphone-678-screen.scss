@@ -7,6 +7,7 @@ and (max-device-width: 667px)
         .Darkmode-Toggle-Container {
             padding: 0;
             padding-top: 8px;
+            padding-bottom: 10px;
             height: 25px;
             justify-content: center;
             align-content: flex-end;
@@ -19,11 +20,13 @@ and (max-device-width: 667px)
                 width: 330px;
             }
         }
-        #result-content #result-wrapper {
-            height: 440px;
-            justify-content: center;
-            #result {
-                width: 320px;
+        #result-content {
+            height: auto;
+            #result-wrapper {
+                #result {
+                    margin-top: 100px;
+                    width: 320px;
+                }
             }
         }
         #result-content:hover {
@@ -50,7 +53,7 @@ and (max-device-width: 667px)
                     height: 220px;
                     font-size: 17px;
                 }
-                #contact-form-submit{
+                #contact-form-send{
                     margin-left: 60px;
                     margin-right: auto;
                 }

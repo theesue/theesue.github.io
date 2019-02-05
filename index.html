@@ -6,6 +6,13 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
         <script type="text/javascript" src="../assets/js/screen_size.js"></script>
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_AaGPQlJDryNmPCv9GWwk9");
+            })();
+        </script>
         <title>Hmong:English Translator</title>
     </head>
     <body>
@@ -15,7 +22,7 @@
             <div class="Darkmode-Toggle-Container" id="header">
                 <label class="Darkmode-Toggle" title="Dark Mode">
                     <input type="checkbox" id="Checkbox-Slider">
-                    <span class="Slider"></span>
+                    <span class = "Slider"></span>
                 </label>
             </div>
             <!--Starting Body-->
@@ -57,18 +64,20 @@
         <div class="Contact-Form-Overlay"></div>
         <div class="Contact-Form-Content">
             <div id="contact-form-popup">
+                <script src="https://www.google.com/recaptcha/api.js"></script>
                 <p id="contact-form-popup-msg">
                     Feel free to send any inquiries, comments, or ideas that you may have.
                 </p>
-                <form id="contact-form">
-                    <input id="input-text-1" type="text" name="fullname" placeholder="Full Name">
-                    <input id="input-text-1" type="text" name="email" placeholder="Email">
+                <form id="contact-form" method="post">
+                    <input id="input-text-1" type="text" name="full_name" placeholder="Full Name">
+                    <input id="input-text-1" type="text" name="sender_email" placeholder="Email">
                     <textarea id="input-text-2" type="text" name="message" placeholder='Hello Sue, (double-click to autofill)' ondblclick="this.value='Hello Sue, '"></textarea>
-                    <input id="contact-form-submit" type="button" value="Submit">
+                    <div class="g-recaptcha" data-sitekey="6LdrJ48UAAAAAMifnBPY8givjfs6pGDE7cpDk1w_"></div>
+                    <input id="contact-form-send" type="button" value="Send">
                 </form>
                 <button id="close-button">Close</button>
             </div>
-        </div>
+        </div>      
         <script type="text/javascript" src="../assets/js/actions.js"></script>
         <script type="text/javascript" src="../assets/js/dictionary.js"></script>
     </body>
