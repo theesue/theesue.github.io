@@ -1,6 +1,6 @@
-var contactform = document.querySelector('contact-form');
+var form = document.querySelector("#contact-form");
 
-contactform.submit(function(event) {
+form.submit(function(event) {
     event.preventDefault();
 
     var template_params = {
@@ -12,13 +12,13 @@ contactform.submit(function(event) {
     var service_id = 'gmail';
     var template_id = 'hmong_translator';
 
-    contactform.find('#contact-form-send').text('Sending...');
+    form.querySelector('#contact-form-send').innerHTML = 'Sending...';
     emailjs.send(service_id, template_id, template_params)
         .then(function(response) {
             console.log('successs', reponse.status, reponse.text);
         }, function(error) {
-            console.log('failed', JSON.stringify(error));
-            contactform.find('#contact-form-send').text('Send');
+            console.log('failed', error);
+            form.querySelector('#contact-form-send').innerHTML = 'Send';
         });
         return false;
 });
