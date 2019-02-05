@@ -404,7 +404,7 @@ input:checked + .Slider:before{
 
     #contact-form-popup {
         width: 550px;
-        height: 510px;
+        height: 590px;
         padding: 30px 30px 30px 55px;
         border-radius: 25px;
         background-color: rgb(240, 240, 240);
@@ -479,6 +479,10 @@ input:checked + .Slider:before{
             }
             #input-text-1:not(:placeholder-shown) {
                 width: 40%;
+            }
+            .g-recaptcha {
+                margin: 0;
+                padding-bottom: 8px;
             }
             #contact-form-send {
                 margin: 0 auto 8px 160px;

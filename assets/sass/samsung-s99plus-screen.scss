@@ -30,13 +30,13 @@ and (max-device-width: 740px)
             }
         }
     }
-    #contact-form-overlay #contact-form-overlay-background {
+    .Contact-Form-Content#load {
         #contact-form-popup{
             width: 300px;
             height: 570px;
             padding: 20px;
             #contact-form-popup-msg{
-                width: 320px;
+                width: 300px;
                 margin: 5px 0 20px 0;
             }
             #contact-form{
@@ -53,6 +53,12 @@ and (max-device-width: 740px)
                 #contact-form-send{
                     margin-left: 53px;
                     margin-right: auto;
+                }
+                #input-text-1:focus {
+                    width: 80%
+                }
+                #input-text-1:not(:placeholder-shown) {
+                    width: 80%;
                 }
             }
             #close-button{

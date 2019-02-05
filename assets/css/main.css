@@ -442,7 +442,7 @@ input:checked + .Slider:before {
   background-color: transparent; }
   .Contact-Form-Content#load #contact-form-popup {
     width: 550px;
-    height: 510px;
+    height: 590px;
     padding: 30px 30px 30px 55px;
     border-radius: 25px;
     background-color: #f0f0f0; }
@@ -512,6 +512,9 @@ input:checked + .Slider:before {
         width: 40%; }
       .Contact-Form-Content#load #contact-form-popup #contact-form #input-text-1:not(:placeholder-shown) {
         width: 40%; }
+      .Contact-Form-Content#load #contact-form-popup #contact-form .g-recaptcha {
+        margin: 0;
+        padding-bottom: 8px; }
       .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-send {
         margin: 0 auto 8px 160px;
         padding: 10px 15px 10px 15px;

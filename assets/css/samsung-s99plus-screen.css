@@ -21,25 +21,29 @@
     body .Grid-Container #result-content #result-wrapper #result {
       margin-top: 100px;
       width: 320px; }
-  #contact-form-overlay #contact-form-overlay-background #contact-form-popup {
+  .Contact-Form-Content#load #contact-form-popup {
     width: 300px;
     height: 570px;
     padding: 20px; }
-    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form-popup-msg {
-      width: 320px;
+    .Contact-Form-Content#load #contact-form-popup #contact-form-popup-msg {
+      width: 300px;
       margin: 5px 0 20px 0; }
-    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form {
+    .Contact-Form-Content#load #contact-form-popup #contact-form {
       width: 300px; }
-      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-1 {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #input-text-1 {
         width: 60%;
         font-size: 16px; }
-      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #input-text-2 {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #input-text-2 {
         width: 283px;
         height: 220px;
         font-size: 17px; }
-      #contact-form-overlay #contact-form-overlay-background #contact-form-popup #contact-form #contact-form-send {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #contact-form-send {
         margin-left: 53px;
         margin-right: auto; }
-    #contact-form-overlay #contact-form-overlay-background #contact-form-popup #close-button {
+      .Contact-Form-Content#load #contact-form-popup #contact-form #input-text-1:focus {
+        width: 80%; }
+      .Contact-Form-Content#load #contact-form-popup #contact-form #input-text-1:not(:placeholder-shown) {
+        width: 80%; }
+    .Contact-Form-Content#load #contact-form-popup #close-button {
       margin: 0 auto 0 128px;
       padding: 5px 10px; } }
