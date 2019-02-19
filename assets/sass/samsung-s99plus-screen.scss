@@ -4,18 +4,9 @@ and (min-device-width: 360px)
 and (max-device-width: 740px)
 {
     body .Grid-Container {
-        .Darkmode-Toggle-Container {
-            padding: 0;
-            padding-top: 8px;
-            padding-bottom: 12px;
-            height: 25px;
-            justify-content: center;
-            align-content: flex-end;
-            grid-row: 3;
-        }
         .Body-Main-Container #search-bar-content {
             margin: 120px 0 40px 0;
-            #search #search-bar-textbox{
+            .Search-Bar-Textbox#load {
                 font-size: 1em;
                 width: 330px;
             }
@@ -28,6 +19,9 @@ and (max-device-width: 740px)
                     width: 320px;
                 }
             }
+        }
+        #result-content:hover{
+            pointer-events: none;
         }
     }
     .Contact-Form-Content#load {

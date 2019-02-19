@@ -84,7 +84,6 @@ var dict = {
 };
 
 var phrases = {
-    'bad bitch': 'puj laib',
     'good heart': 'sab zoo',
     'first name': 'npe',
     'last name': 'lub ceeg',
@@ -123,7 +122,7 @@ var phrases = {
     'you hurt me': 'koj ua mob kuv',
     'don\'t break my heart': 'tsis txob ua kuv tou sab',
     'don\'t make me sad': 'tsis txob ua kuv tou sab',
-}
+};
 
 //consider string.split(' ') then find the words
 

@@ -4,13 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Barlow|Nunito+Sans|Rasa:400,500|Montserrat|Noto+Sans|Raleway|Roboto|Roboto+Slab" rel="stylesheet"> 
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
-        <script type="text/javascript">
-            (function(){
-                emailjs.init("user_AaGPQlJDryNmPCv9GWwk9");
-            })();
-        </script>
         <link rel="stylesheet" type="text/css" href="assets/css/main.css">
         <script type="text/javascript" src="assets/js/screen_size.js"></script>
         <title>Hmong:English Translator</title>
@@ -19,21 +14,13 @@
         <!--Main Content-->
         <div class="Grid-Container">
             <!--Starting Header-->
-            <div class="Darkmode-Toggle-Container" id="header">
-                <label class="Darkmode-Toggle" title="Dark Mode">
-                    <input type="checkbox" id="Checkbox-Slider">
-                    <span class = "Slider"></span>
-                </label>
-            </div>
             <!--Starting Body-->
             <div class="Body-Main-Container" id="body">
                 <!--Body Content-->
                 <div class="Body-Main-Content">
                     <div class="Main-Main-Content-Container">
                         <div id="search-bar-content">
-                            <form id="search">
-                                <input id="search-bar-textbox" type="text" placeholder="enter a word or phrase here" spellcheck="true" oninput="search(this.value)" autocomplete="off">
-                            </form>
+                            <input class="Search-Bar-Textbox" type="text" placeholder="enter a word or phrase here" spellcheck="true" oninput="search(this.value)" autocomplete="off">
                         </div>
                         <div id="result-content">
                             <div id="result-wrapper">
@@ -48,15 +35,12 @@
             </div>
             <!--Body Footer-->
             <div class="Body-Main-Footer" id="footer">
-                <div class="Body-Main-Footer-Container">
-                    <div id="body-main-footer-credit-wrapper">
-                        <span id="credit">
-                            Designed by <button id="contact-button">Sue Vang</button>
-                        </span>
-                        <span id="copyright">
-                            &#x24B8; 2019
-                        </span>
-                    </div>
+                <div class="Footer-Flux-Container">
+                    <span id="credit">
+                        <p>Made by </p>
+                        <button id="contact-button">Sue Vang</button>
+                    </span>
+                    <span id="copyright">Copyright &#x24B8; 2019</span> 
                 </div>
             </div>
         </div>
@@ -64,19 +48,18 @@
         <div class="Contact-Form-Overlay"></div>
         <div class="Contact-Form-Content">
             <div id="contact-form-popup">
-                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <!--<script src="https://www.google.com/recaptcha/api.js"></script>-->
                 <p id="contact-form-popup-msg">
-                    Feel free to send any inquiries, comments, or ideas that you may have.
+                    Don't hesitate to reach out.
                 </p>
-                <form id="contact-form" method="post">
-                    <script type="text/javascript" src="assets/js/email_handler.js"></script>
+                <form id="contact-form" method="POST" autocomplete="off">
                     <input id="input-text-1" type="text" name="full_name" placeholder="Full Name">
                     <input id="input-text-1" type="text" name="sender_email" placeholder="Email">
                     <textarea id="input-text-2" type="text" name="message" placeholder='Hello Sue, (double-click to autofill)' ondblclick="this.value='Hello Sue, '"></textarea>
-                    <div class="g-recaptcha" data-sitekey="6LdrJ48UAAAAAMifnBPY8givjfs6pGDE7cpDk1w_"></div>
-                    <button id="contact-form-send">Send</button>
+                    <!--<div class="g-recaptcha" data-sitekey="6LdrJ48UAAAAAMifnBPY8givjfs6pGDE7cpDk1w_"></div>-->
+                    <button id="contact-form-send" type="submit">Send</button>
+                    <button id="close-button">Close</button>
                 </form>
-                <button id="close-button">Close</button>
             </div>
         </div>
         <script type="text/javascript" src="assets/js/actions.js"></script>

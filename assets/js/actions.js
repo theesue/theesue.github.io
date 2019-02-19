@@ -20,25 +20,31 @@ function close() {
 }
 
 // Fade in inquiry message 
-function loadInquiryMsg() {
+function loadPage() {
+    var serachBar = document.querySelector('.Search-Bar-Textbox');
     var resultFade = document.querySelector('#result');
+    var credit = document.querySelector('#credit');
+    var copyRight = document.querySelector('#copyright');
+    serachBar.id = 'load';
     resultFade.className = 'load';
+    credit.className = 'load';
+    copyRight.className = 'load';
 }
 
 // Load arrow if screen is bigger than the following
-function arrwAnimationIn(){
-    if(screen.width !== 375 && screen.width !== 414 && screen.width !== 768)
+function arrwAnimationIn() {
+    if(screen.width > 375 && screen.width > 414 && screen.width > 768)
     {
         if(document.querySelector('#result').innerHTML.includes('For inquiries'))
         {
-            var arrw = document.querySelector('#arrow-symbol');
+            var arrw = document.getElementById('arrow-symbol');
             arrw.className = 'fadein';
         }
     }
 }
 // Anime the arrow in and out
-function arrwAnimationOut(){
-    if(screen.width !== 375 && screen.width !== 414 && screen.width !== 768)
+function arrwAnimationOut() {
+    if(screen.width > 375 && screen.width > 414 && screen.width > 768)
     {
         if(document.getElementById('result').innerHTML.includes('For inquiries'))
         {
@@ -49,30 +55,10 @@ function arrwAnimationOut(){
 }
 
 // Prevent mobile phones from copying arrow character
-function arrwHide() {
+function hideArrow() {
     var arrw = document.getElementById('result-content').style.pointerEvents ='none';
 }
 
-// Dark mode toggle
-function ChangeColor() {
-    var bod = document.getElementsByTagName('BODY')[0];
-    var toggled = document.getElementById('Checkbox-Slider').checked;
-    if(toggled) {
-        addDarkmode();
-    }
-    else {
-        removejscssfile('darkmode.css','css');
-    }
-}
-
-function addDarkmode() {
-    var body = document.getElementsByTagName('BODY')[0];
-    var link = document.createElement('link');
-    link.setAttribute('rel', 'stylesheet');
-    link.setAttribute('type', 'text/css');
-    link.setAttribute('href', '/assets/css/darkmode.css');
-    body.appendChild(link);   
-}
 
 function removejscssfile(filename, filetype) {
     var targetelement = (filetype=="js") ? "script" : (filetype=="css") ? "link" : "none";   //determine element type to create nodelist from
@@ -101,28 +87,18 @@ window.onload = () => {
         close();
     };
 
-    document.querySelector('#search-bar-textbox').onclick = () => {
-        arrwHide();
+    document.querySelector('.Search-Bar-Textbox').onclick = () => {
+        hideArrow();
     };
-
-    var toggled = document.querySelector('#Checkbox-Slider').checked;
-    if(toggled) {
-        addDarkmode();
-    }
 
     // Watch if mouse hovers over the result content area to anime arrow drop down
     var arrwContent = document.getElementById('result-wrapper');
     arrwContent.addEventListener('mouseover', arrwAnimationIn);
     arrwContent.addEventListener('mouseout', arrwAnimationOut);
 
-    // Watch for Dark Mode to be checked
-    var toggling = document.querySelector('#Checkbox-Slider');
-    toggling.addEventListener('click', ChangeColor);
-
     var ovrlay = document.querySelector('.Contact-Form-Overlay');
     ovrlay.addEventListener('click', close());
 
     removeArrow(screen.width, screen.height);
-
 };
-window.setTimeout(loadInquiryMsg, 500);
+window.setTimeout(loadPage, 500);
