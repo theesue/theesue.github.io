@@ -1,7 +1,4 @@
 # Hmong:English Translator
-
-Hello my name is Sue Vang and I am Hmong. 
-
 This is my personal project to create a simple Hmong to English (vice versa) translator for anyone interested to learn
 a Hmong word or two (or English). The colon is used in the page title (Hmong:English) to show the proportion or the key bind
 to its value. (i.e key : value => hello : nyob zoo).
