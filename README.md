@@ -4,7 +4,7 @@ a Hmong word or two (or English). The colon is used in the page title (Hmong:Eng
 to its value. (i.e key : value => hello : nyob zoo).
 
 ### Goal:
-Create a minimal static website to translate Hmong : English and learn as much as I can.
+Create a minimal static website to translate Hmong : English and learn as much as I can. Ultimately, using this to make a dynamic webpage using NodeJS and MYSQL or MongDB. 
 
 ### What I learned:
   1. HTML
